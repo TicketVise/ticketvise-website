@@ -1,3 +1,34 @@
 <script>
-    // your JS here
+    /**
+     * This makes the header bar transparent
+     * at the top and white everywhere else.
+     */
+    window.onload = async function () {
+        const header = document.querySelector('nav')
+        const top = document.documentElement.scrollTop || document.body.scrollTop
+
+        if (top) {
+            header.classList.remove('bg-transparent')
+            header.classList.add('bg-white')
+            header.classList.add('shadow-lg')
+        } else {
+            header.classList.remove('bg-white')
+            header.classList.remove('shadow-lg')
+            header.classList.add('bg-transparent')
+        }
+
+        window.onscroll = async function () {
+            const top = document.documentElement.scrollTop || document.body.scrollTop
+
+            if (top) {
+                header.classList.remove('bg-transparent')
+                header.classList.add('bg-white')
+                header.classList.add('shadow-lg')
+            } else {
+                header.classList.remove('bg-white')
+                header.classList.remove('shadow-lg')
+                header.classList.add('bg-transparent')
+            }
+        }
+    }
 </script>

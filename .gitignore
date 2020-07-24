@@ -104,3 +104,6 @@ dist
 
 # TernJS port file
 .tern-port
+
+# Public folder which only contains compiled items.
+public

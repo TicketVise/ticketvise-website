@@ -1,12 +1,85 @@
 <!DOCTYPE html>
 <html lang="{{ .Site.Language.Lang }}">
-    <head>
-        {{ partial "head.html" . }}
-    </head>
-    <body class="flex flex-col font-sans bg-gray-200">
-        <main class="w-full min-h-screen flex flex-col items-center justify-center lg:w-3/4 xl:w-2/3 px-3 py-12 mx-auto">
-            {{ block "main" . }}{{ end }}
-        </main>
-        {{ partial "js.html" . }}
-    </body>
+
+<head>
+    {{ partial "head.html" . }}
+</head>
+
+<body class="flex flex-col min-h-screen">
+    <nav class="bg-white border-b sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center w-full">
+                    <div class="flex-shrink-0">
+                        <img class="h-8 w-8" src="https://tailwindui.com/img/logos/workflow-mark-on-white.svg"
+                            alt="Workflow logo">
+                    </div>
+                    <div class="hidden md:block">
+                        <div class="ml-10 flex items-baseline space-x-4">
+                            <a href="#"
+                                class="px-3 py-5 font-medium text-white border-b-2 border-orange-600">Home</a>
+                            <a href="#" class="px-3 py-5 font-medium text-white">Features</a>
+                            <a href="#" class="px-3 py-5 font-medium text-white">Pricing</a>
+                            <a href="#" class="px-3 py-5 font-medium text-white">About</a>
+                            <a href="#" class="px-3 py-5 font-medium text-white">Contact</a>
+                        </div>
+                    </div>
+                    <div class="flex-grow"></div>
+                    <div class="hidden md:block">
+                        <div class="rounded-md shadow">
+                            <a href="#"
+                                class="w-full flex items-center justify-center px-5 py-2 border border-transparent text-base leading-6 font-medium rounded-md text-orange-600 bg-white hover:bg-gray-200 focus:outline-none focus:border-orange-700 focus:shadow-outline-orange transition duration-150 ease-in-out">
+                                Demo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="-mr-2 flex md:hidden">
+                    <!-- Mobile menu button -->
+                    <button
+                        class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:bg-gray-700 focus:text-white">
+                        <!-- Menu open: "hidden", Menu closed: "block" -->
+                        <svg class="block h-6 w-6" stroke="currentColor" fill="none" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                        <!-- Menu open: "block", Menu closed: "hidden" -->
+                        <svg class="hidden h-6 w-6" stroke="currentColor" fill="none" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!--
+              Mobile menu, toggle classes based on menu state.
+        
+              Open: "block", closed: "hidden"
+            -->
+        <div class="hidden md:hidden">
+            <div class="px-2 pt-2 pb-3 sm:px-3">
+                <a href="#"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-white bg-gray-900 focus:outline-none focus:text-white focus:bg-gray-700">Dashboard</a>
+                <a href="#"
+                    class="mt-1 block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-700 focus:outline-none focus:text-white focus:bg-gray-700">Team</a>
+                <a href="#"
+                    class="mt-1 block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-700 focus:outline-none focus:text-white focus:bg-gray-700">Projects</a>
+                <a href="#"
+                    class="mt-1 block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-700 focus:outline-none focus:text-white focus:bg-gray-700">Calendar</a>
+                <a href="#"
+                    class="mt-1 block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-700 focus:outline-none focus:text-white focus:bg-gray-700">Reports</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="w-full flex flex-col flex-grow pt-12 mx-auto overflow-y-auto">
+        {{ block "main" . }}{{ end }}
+    </main>
+    {{ partial "footer.html" . }}
+
+    {{ partial "js.html" . }}
+</body>
+
 </html>
