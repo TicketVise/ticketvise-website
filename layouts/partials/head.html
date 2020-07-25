@@ -5,8 +5,6 @@
 <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ if .IsPage }}{{ .Summary }}{{ else }}{{ .Site.Params.description }}{{ end }}{{ end }}">
 <meta name="author" content="{{ .Site.Params.author }}">
 <meta name="robots" content="index,follow">
-{{ template "_internal/twitter_cards.html" . }}
-{{ template "_internal/opengraph.html" . }}
 <title>{{ if .IsHome }}Home | {{ .Site.Author.name }}{{ else }}{{ .Title }} | {{ .Site.Author.name }}{{ end }}</title>
 <meta name="theme-color" content="#ffffff">
 <link rel="stylesheet" href="{{ .Site.BaseURL}}css/page.css">
