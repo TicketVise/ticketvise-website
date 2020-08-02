@@ -597,7 +597,7 @@
     </div>
 
     <main class="w-full flex flex-col flex-grow pt-12 mx-auto overflow-y-auto">
-        {{ block "main" . }}{{ end }}
+        {{ .Content }}
     </main>
     {{ partial "footer.html" . }}
 
