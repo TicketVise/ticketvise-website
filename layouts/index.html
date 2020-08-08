@@ -1,5 +1,5 @@
 {{ define "main" }}
-<div class="absolute top-0 left-0" style="z-index: -1;">
+<div class="absolute top-0 left-0 hidden" style="z-index: -1;">
     <!-- <img src="{{ .Site.BaseURL}}img/landing_bg.svg" alt=""> -->
     <svg class="fill-current text-gray-600 w-full" version="1.1" xmlns="http://www.w3.org/2000/svg"
         xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid meet" viewBox="0 0 1920 1080"
@@ -10,9 +10,9 @@
     </svg>
 </div>
 
-<div class="container mx-auto grid grid-cols-2 mb-48">
+<div class="container p-4 mx-auto grid lg:grid-cols-2 grid-cols-1 gap-16 mb-32">
     <!-- Website title -->
-    <div class="flex flex-col justify-center">
+    <div class="flex flex-col justify-center text-center lg:text-left">
         <h2
             class="text-4xl tracking-tight leading-10 font-extrabold text-gray-900 sm:text-5xl sm:leading-none md:text-6xl">
             Let's focus on the things that
@@ -25,12 +25,12 @@
     </div>
 
     <!-- Website landing image -->
-    <img src="{{ .Site.BaseURL}}img/team_chat.svg" alt="Landing image">
+    <img class="mx-auto w-3/4" src="{{ .Site.BaseURL}}img/team_chat.svg" alt="Landing image">
 </div>
 
 <!-- Main features -->
-<div class="container mx-auto grid grid-cols-4 gap-12 mb-64">
-    <div class="flex flex-col bg-white p-4 rounded shadow-lg text-center">
+<div class="container p-4 mx-auto grid sm:grid-cols-2 gap-4 mb-10 sm:mb-20 lg:mb-64 md:grid-cols-3 lg:grid-cols-4">
+    <div class="flex-col bg-white p-4 rounded shadow-lg text-center flex md:hidden lg:flex">
         <img class="h-20 mb-4" src="{{ .Site.BaseURL}}img/social_friends.svg" alt="Overview">
         <h3 class="font-semibold text-gray-900 text-lg mb-1">Clear overview</h3>
         <p class="text-sm text-gray-700">
@@ -65,10 +65,10 @@
 </div>
 
 <!-- Keypoints -->
-<div class="container mx-auto grid grid-cols-2 gap-40 mb-64 -z-1">
+<div class="container mx-auto flex flex-col md:grid md:grid-cols-2 gap-4 lg:gap-40 p-4 mb-10 lg:mb-64 -z-1">
     <div class="flex flex-col justify-center">
         <h2 class="text-3xl font-bold text-gray-900 flex items-center">
-            <svg class="inline mr-2 fill-current text-gray-900" viewBox="0 0 16 16" version="1.1" width="36" height="36"                
+            <svg class="inline mr-2 fill-current text-gray-900" viewBox="0 0 16 16" version="1.1" width="36" height="36"
                 aria-hidden="true">
                 <path fill-rule="evenodd"
                     d="M14.85 3H1.15C.52 3 0 3.52 0 4.15v7.69C0 12.48.52 13 1.15 13h13.69c.64 0 1.15-.52 1.15-1.15v-7.7C16 3.52 15.48 3 14.85 3zM9 11H7V8L5.5 9.92 4 8v3H2V5h2l1.5 2L7 5h2v6zm2.99.5L9.5 8H11V5h2v3h1.5l-2.51 3.5z">
@@ -76,41 +76,41 @@
             </svg>
             Markdown
         </h2>
-        <p class="text-gray-600 mb-8">The questions support markdown. This allows you to better form you question. For
+        <p class="text-gray-600 lg:mb-8">The questions support markdown. This allows you to better form you question. For
             example when you have a coding question you can use markdown to style you code which gives the teacher a
             better understanding of the question and results in answers which help the student better.</p>
         <a class="text-lg font-medium text-orange-600 hover:underline" href="/features">More features</a>
     </div>
     <div class="relative fill-current text-orange-200">
-        <svg class="absolute -z-1 transform -translate-y-24" version="1.1" xmlns="http://www.w3.org/2000/svg"
+        <!-- <svg class="absolute -z-1 transform -translate-y-32 scale-75 md:-translate-y-24" version="1.1" xmlns="http://www.w3.org/2000/svg"
             xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid meet" viewBox="0 0 800 800"
             width="800" height="800">
             <path
                 d="M414.83 120.61C452.11 166.71 550.42 206.8 550.42 270.17C550.42 381.25 479.24 413.37 381.53 454.86C348.08 469.07 246.72 521.01 207.98 521.01C56.09 521.01 0 419.28 0 270.17C0 199.34 91.77 199.02 137.26 150.82C187.54 97.55 195.47 0 275.21 0C362.55 0 364.4 58.24 414.83 120.61Z">
             </path>
-        </svg>
+        </svg> -->
         <div class="bg-white w-5/6 mx-auto shadow-lg rounded-lg p-4">
             <img src="{{ .Site.BaseURL}}img/reply.png" alt="">
         </div>
     </div>
 </div>
 
-<div class="container mx-auto grid grid-cols-2 gap-40 mb-64 -z-1">
+<div class="container mx-auto flex flex-col-reverse md:grid md:grid-cols-2 gap-4 lg:gap-40 p-4 mb-10 sm:mb-20 lg:mb-64 -z-1">
     <div class="relative fill-current text-orange-200">
-        <svg class="absolute -z-1 transform -translate-y-24" version="1.1" xmlns="http://www.w3.org/2000/svg"
+        <!-- <svg class="absolute -z-1 transform -translate-y-24" version="1.1" xmlns="http://www.w3.org/2000/svg"
             xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid meet" viewBox="0 0 800 800"
             width="800" height="800">
             <path
                 d="M397.67 115.87C434.95 161.97 522.02 130.47 522.02 193.84C522.02 304.92 499.95 364.26 402.24 405.75C368.79 419.95 323.05 503.85 284.31 503.85C188.62 503.85 154.64 407.25 112.38 340.96C87.56 302.02 33.14 311.14 33.14 255.97C33.14 185.14 63.36 141.04 108.86 92.83C159.14 39.56 232.15 22.49 311.9 22.49C399.23 22.49 347.24 53.5 397.67 115.87Z">
             </path>
-        </svg>
+        </svg> -->
         <div class="bg-white w-5/6 mx-auto shadow-lg rounded-lg p-4">
             <img src="{{ .Site.BaseURL}}img/reply.png" alt="">
         </div>
     </div>
     <div class="flex flex-col justify-center">
         <h2 class="text-3xl font-bold text-gray-900">Integration</h2>
-        <p class="text-gray-600 mb-8">The questions support markdown. This allows you to better form you question. For
+        <p class="text-gray-600 lg:mb-8">The questions support markdown. This allows you to better form you question. For
             example when you have a coding question you can use markdown to style you code which gives the teacher a
             better understanding of the question and results in answers which help the student better.</p>
         <a class="text-lg font-medium text-orange-600 hover:underline" href="/integration">More integrations</a>
@@ -118,76 +118,76 @@
 </div>
 
 <!-- Stats section -->
-<div class="bg-gray-200 mb-56 text-center pt-16 -z-1">
-    <h2 class="font-bold text-4xl text-gray-900 mb-2">Trusted by teachers from over 1 university</h2>
-    <h3 class="text-xl text-gray-600 -mb-8">Lorem ipsum, sit amet consectetur adipisicing elit. Repellendus repellat
+<div class="bg-gray-200 mb-10 sm:mb-20 lg:mb-56 text-center p-4 pt-16 -z-1">
+    <h2 class="font-bold text-2xl sm:text-3xl md:text-4xl text-gray-900 mb-2">Trusted by teachers from over 1 university</h2>
+    <h3 class="sm:text-lg md:text-xl text-gray-600 -mb-8">Lorem ipsum, sit amet consectetur adipisicing elit. Repellendus repellat
         laudantium.</h3>
 
     <div
         class="bg-white container max-w-screen-lg mx-auto grid grid-cols-3 transform translate-y-1/2 shadow-lg rounded-lg divide-x">
         <div class="flex flex-col p-4">
-            <span class="text-6xl font-bold text-orange-600">100%</span>
-            <span class="text-lg text-gray-600">Swag</span>
+            <span class="text-4xl sm:text-5xl lg:text-6xl font-bold text-orange-600">100%</span>
+            <span class="text-lg text-gray-600">Uptime</span>
         </div>
         <div class="flex flex-col p-4">
-            <span class="text-6xl font-bold text-orange-600">24/7</span>
+            <span class="text-4xl sm:text-5xl lg:text-6xl font-bold text-orange-600">24/7</span>
             <span class="text-lg text-gray-600">Running</span>
         </div>
         <div class="flex flex-col p-4">
-            <span class="text-6xl font-bold text-orange-600">100k</span>
+            <span class="text-4xl sm:text-5xl lg:text-6xl font-bold text-orange-600">100k</span>
             <span class="text-lg text-gray-600">Tickets</span>
         </div>
     </div>
 </div>
 
 <!-- Frequently asked questions -->
-<div class="container mx-auto divide-y-2 divide-gray-200 mb-40">
+<div class="container mx-auto divide-y-2 divide-gray-200 p-4 mb-10 lg:mb-40">
     <h2 class="text-gray-900 text-3xl font-bold py-4">Frequently asked questions</h2>
-    <div class="grid grid-cols-2 grid-rows-3 py-4 gap-8">
+    <div class="flex flex-col space-y-2 sm:space-y-0 sm:grid sm:grid-cols-2 grid-rows-3 py-4 md:gap-8">
         <div>
-            <span class="text-xl text-gray-900 font-medium mb-2">I don't like our current mailinglist.</span>
-            <p class="text-gray-600">We totally get it and that's exactly the reason we build TicketVise. We streamline
+            <span class="md:text-xl text-gray-900 font-medium mb-2">I don't like our current mailinglist.</span>
+            <p class="text-sm text-gray-600">We totally get it and that's exactly the reason we build TicketVise. We streamline
                 the process of students asking questions.</p>
         </div>
         <div>
-            <span class="text-xl text-gray-900 font-medium mb-2">How does it work?</span>
-            <p class="text-gray-600">Students ask questions which land in a clean over board to track the questions per
+            <span class="md:text-xl text-gray-900 font-medium mb-2">How does it work?</span>
+            <p class="text-sm text-gray-600">Students ask questions which land in a clean over board to track the questions per
                 course. This gives you a clear overview of which questions need to be answered.</p>
         </div>
         <div>
-            <span class="text-xl text-gray-900 font-medium mb-2">Can I integrate TicketVise with my LMS?</span>
-            <p class="text-gray-600">Yes! We currently only support Canvas but are expending into other platforms. If
+            <span class="md:text-xl text-gray-900 font-medium mb-2">Can I integrate TicketVise with my LMS?</span>
+            <p class="text-sm text-gray-600">Yes! We currently only support Canvas but are expending into other platforms. If
                 you have a specific platform you would like, let us know!</p>
         </div>
         <div>
-            <span class="text-xl text-gray-900 font-medium mb-2">How does TicketVise contribute to didactic skills of
+            <span class="md:text-xl text-gray-900 font-medium mb-2">How does TicketVise contribute to didactic skills of
                 students?</span>
-            <p class="text-gray-600">We offer statistics for the teachers which they can use to get insight into
+            <p class="text-sm text-gray-600">We offer statistics for the teachers which they can use to get insight into
                 questions. For example you can see which questions are asked the most.</p>
         </div>
         <div>
-            <span class="text-xl text-gray-900 font-medium mb-2">I don't want to assign each question myself.</span>
-            <p class="text-gray-600">We neither! TicketVise therefore includes streamlining the process using workflows.
+            <span class="md:text-xl text-gray-900 font-medium mb-2">I don't want to assign each question myself.</span>
+            <p class="text-sm text-gray-600">We neither! TicketVise therefore includes streamlining the process using workflows.
                 Which automates the process of assigning questions to assistants.</p>
         </div>
         <div>
-            <span class="text-xl text-gray-900 font-medium mb-2">Can I discuss the questions with the rest of the
+            <span class="md:text-xl text-gray-900 font-medium mb-2">Can I discuss the questions with the rest of the
                 team?</span>
-            <p class="text-gray-600">Yes, we can chat directly in TicketVise with the team. You can even mention people
+            <p class="text-sm text-gray-600">Yes, we can chat directly in TicketVise with the team. You can even mention people
                 or another question.</p>
         </div>
     </div>
 </div>
 
 <!-- Request a demo banner. -->
-<div class="bg-orange-200 mb-32">
+<div class="bg-orange-200 mb-10 lg:mb-32">
     <div class="max-w-screen-xl mx-auto py-12 px-4 sm:px-6 lg:py-12 lg:px-8 lg:flex lg:items-center lg:justify-between">
-        <h2 class="text-3xl leading-9 font-extrabold tracking-tight text-gray-900 sm:text-4xl sm:leading-10">
+        <h2 class="text-2xl md:text-3xl md:leading-9 font-extrabold tracking-tight text-gray-900 sm:text-4xl leading-tight">
             Ready to dive in?
             <br>
             <span class="text-orange-600">Check out the demo environment!</span>
         </h2>
-        <div class="mt-8 flex lg:flex-shrink-0 lg:mt-0">
+        <div class="mt-8 flex justify-center lg:flex-shrink-0 lg:mt-0">
             <div class="inline-flex rounded-md shadow">
                 <a href="#"
                     class="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-orange-600 hover:bg-orange-500 focus:outline-none focus:shadow-outline transition duration-150 ease-in-out">
@@ -205,15 +205,15 @@
 </div>
 
 <!-- Quotes section. -->
-<div class="container mx-auto flex flex-col justify-center text-center mb-32">
-    <img class="h-12 mx-auto mb-6" src="{{ .Site.BaseURL}}img/uva-logo.jpg" alt="">
-    <span class="w-1/2 mx-auto text-xl mb-6">"Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium,
+<div class="container mx-auto flex flex-col justify-center text-center mb-10 lg:mb-32 p-4">
+    <img class="h-12 mx-auto mb-6" src="{{ .Site.BaseURL}}img/logo.png" alt="">
+    <span class="lg:w-1/2 md:w-3/4 mx-auto text-xl mb-6">"Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium,
         dicta laudantium, optio veritatis quas impedit quae et necessitatibus porro placeat temporibus repellat aut
         nulla qui nam excepturi corrupti blanditiis quod?"</span>
     <div class="flex h-8 mx-auto items-center">
         <img class="w-8 h-8 rounded-full mr-4" src="{{ .Site.BaseURL}}img/ivan.jpg" alt="">
         <span class="pr-4 text-gray-900 border-r-2 border-orange-600">Ivan de Wolf</span>
-        <span class="pl-4 text-gray-500">Founder, TicketVise</span>
+        <span class="pl-4 text-gray-500">Co-Founder, TicketVise</span>
     </div>
 </div>
 {{ end }}

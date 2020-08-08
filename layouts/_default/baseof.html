@@ -5,20 +5,21 @@
     {{ partial "head.html" . }}
 </head>
 
-<body class="flex flex-col min-h-screen" x-data="{ atTop: true }"
+<body class="flex flex-col min-h-screen" x-data="{ atTop: true, menu: false }"
     x-on:scroll.window="atTop = (window.pageYOffset > 0) ? false : true">
     <!-- This example requires Tailwind CSS v1.4.0+ -->
     <div class="bg-transparent sticky top-0" x-bind:class="{ 'bg-white shadow-lg': !atTop }">
         <div class="max-w-7xl mx-auto px-4 sm:px-6">
             <div class="flex justify-between items-center py-3 md:justify-start md:space-x-10">
                 <div class="lg:w-0 lg:flex-1">
-                    <a href="/" class="flex">
+                    <a href="/" class="flex items-center">
                         <img class="h-8 w-auto sm:h-10"
-                            src="https://tailwindui.com/img/logos/workflow-mark-on-white.svg" alt="Workflow">
+                            src="{{ .Site.BaseURL}}img/logo.svg" alt="Workflow">
+                        <span class="text-2xl ml-2">Ticket</span><span class="text-2xl text-orange-500 font-bold">Vise</span>
                     </a>
                 </div>
-                <div class="-mr-2 -my-2 md:hidden">
-                    <button type="button"
+                <div class="-mr-2 -my-2 hidden">
+                    <button type="button" @click="menu = !menu"
                         class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 focus:text-gray-500 transition duration-150 ease-in-out">
                         <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -26,7 +27,8 @@
                         </svg>
                     </button>
                 </div>
-                <nav class="hidden md:flex space-x-10">
+                <nav class="hidden space-x-10">
+                    <!-- md:flex -->
                     <div class="relative" x-data="{ open: false }">
                         <!-- Item active: "text-gray-900", Item inactive: "text-gray-500" -->
                         <button type="button"
@@ -440,7 +442,7 @@
                         </div>
                     </div>
                 </nav>
-                <div class="hidden md:flex items-center justify-end space-x-8 md:flex-1 lg:w-0">
+                <div class="flex items-center justify-end space-x-8 md:flex-1 lg:w-0">
                     <span class="inline-flex rounded-md shadow-sm">
                         <a href="#"
                             class="whitespace-no-wrap inline-flex items-center justify-center px-4 py-2 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-orange-600 hover:bg-orange-500 focus:outline-none focus:border-orange-700 focus:shadow-outline-orange active:bg-orange-700 transition ease-in-out duration-150">
@@ -451,27 +453,21 @@
             </div>
         </div>
 
-        <!--
-        Mobile menu, show/hide based on mobile menu state.
-    
-        Entering: "duration-200 ease-out"
-            From: "opacity-0 scale-95"
-            To: "opacity-100 scale-100"
-        Leaving: "duration-100 ease-in"
-            From: "opacity-100 scale-100"
-            To: "opacity-0 scale-95"
-        -->
-        <div class="absolute top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden">
-            <div class="rounded-lg shadow-lg">
+        <!-- Mobile menu, show/hide based on mobile menu state. -->
+        <div class="absolute top-0 inset-x-0 p-2 transition transform origin-top-right hidden"> <!-- md:hidden -->
+            <div class="rounded-lg shadow-lg" x-show="menu" @click.away="menu = false"
+                x-transition:enter="duration-200 ease-out" x-transition:enter-start="opacity-0 scale-95"
+                x-transition:enter-end="opacity-100 scale-100" x-transition:leave="duration-100 ease-in"
+                x-transition:leave-start="opacity-100 scale-100" x-transition:leave-end="opacity-0 scale-95">
                 <div class="rounded-lg shadow-xs bg-white divide-y-2 divide-gray-50">
                     <div class="pt-5 pb-6 px-5 space-y-6">
                         <div class="flex items-center justify-between">
                             <div>
                                 <img class="h-8 w-auto"
-                                    src="https://tailwindui.com/img/logos/workflow-mark-on-white.svg" alt="Workflow">
+                                    src="{{ .Site.BaseURL}}img/logo.svg" alt="Workflow">
                             </div>
                             <div class="-mr-2">
-                                <button type="button"
+                                <button type="button" @click="menu = !menu"
                                     class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 focus:text-gray-500 transition duration-150 ease-in-out">
                                     <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
