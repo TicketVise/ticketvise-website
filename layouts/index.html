@@ -10,7 +10,7 @@
     </svg>
 </div>
 
-<div class="container p-4 mx-auto grid lg:grid-cols-2 grid-cols-1 gap-16 mb-32">
+<div class="container p-4 mx-auto grid lg:grid-cols-2 grid-cols-1 gap-16 mb-48">
     <!-- Website title -->
     <div class="flex flex-col justify-center text-center lg:text-left">
         <h2
@@ -20,17 +20,18 @@
         </h2>
         <p class="mt-3 text-base text-gray-500 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
             Students have questions that need answers. We want to help you streamline that process so you can focus on
-            teaching students.
+            the teaching part.
         </p>
     </div>
 
     <!-- Website landing image -->
-    <img class="mx-auto w-3/4" src="{{ .Site.BaseURL}}img/team_chat.svg" alt="Landing image">
+    <img class="mx-auto w-4/5" src="{{ .Site.BaseURL}}img/team_chat.svg" alt="Landing image">
 </div>
 
 <!-- Main features -->
 <div class="container p-4 mx-auto grid sm:grid-cols-2 gap-4 mb-10 sm:mb-20 lg:mb-64 md:grid-cols-3 lg:grid-cols-4">
-    <div class="flex-col bg-white p-4 rounded shadow-lg text-center flex md:hidden lg:flex">
+    <div
+        class="flex-col bg-white p-4 rounded border border-orange-500 hover:shadow-xl text-center flex md:hidden lg:flex">
         <img class="h-20 mb-4" src="{{ .Site.BaseURL}}img/social_friends.svg" alt="Overview">
         <h3 class="font-semibold text-gray-900 text-lg mb-1">Clear overview</h3>
         <p class="text-sm text-gray-700">
@@ -38,34 +39,34 @@
             view you can get anywhere!
         </p>
     </div>
-    <div class="flex flex-col bg-white p-4 rounded shadow-lg text-center">
+    <div class="flex flex-col bg-white p-4 rounded border border-orange-500 hover:shadow-xl text-center">
         <img class="h-20 mb-4" src="{{ .Site.BaseURL}}img/accept_tasks.svg" alt="Overview">
         <h3 class="font-semibold text-gray-900 text-lg mb-1">Automatic scheduling</h3>
         <p class="text-sm text-gray-700">
-            The ticket overview page gives you a clear insight into the status of the tickets for your course. From this
-            view you can get anywhere!
+            Using automatic scheduling your don't even have to touch incoming questions. They get automatically assigned
+            based on your rules.
         </p>
     </div>
-    <div class="flex flex-col bg-white p-4 rounded shadow-lg text-center">
+    <div class="flex flex-col bg-white p-4 rounded border border-orange-500 hover:shadow-xl text-center">
         <img class="h-20 mb-4" src="{{ .Site.BaseURL}}img/success_factors.svg" alt="Overview">
         <h3 class="font-semibold text-gray-900 text-lg mb-1">Course statistics</h3>
         <p class="text-sm text-gray-700">
-            The ticket overview page gives you a clear insight into the status of the tickets for your course. From this
-            view you can get anywhere!
+            We show you a lot of statistics which you can use improving your course. See which questions are asked the
+            most.
         </p>
     </div>
-    <div class="flex flex-col bg-white p-4 rounded shadow-lg text-center">
+    <div class="flex flex-col bg-white p-4 rounded border border-orange-500 hover:shadow-xl text-center">
         <img class="h-20 mb-4" src="{{ .Site.BaseURL}}img/personal_info.svg" alt="Overview">
         <h3 class="font-semibold text-gray-900 text-lg mb-1">LTI integration</h3>
         <p class="text-sm text-gray-700">
-            The ticket overview page gives you a clear insight into the status of the tickets for your course. From this
-            view you can get anywhere!
+            We provide <abbr title="Learning Tools Interoperability">LTI</abbr> integration for easy access from within
+            your <abbr title="Learning Management System">LMS</abbr>. Improve interaction with your students.
         </p>
     </div>
 </div>
 
 <!-- Keypoints -->
-<div class="container mx-auto flex flex-col md:grid md:grid-cols-2 gap-4 lg:gap-40 p-4 mb-10 lg:mb-64 -z-1">
+<div class="container mx-auto flex flex-col md:grid md:grid-cols-2 gap-4 lg:gap-40 p-4 mb-10 lg:mb-64">
     <div class="flex flex-col justify-center">
         <h2 class="text-3xl font-bold text-gray-900 flex items-center">
             <svg class="inline mr-2 fill-current text-gray-900" viewBox="0 0 16 16" version="1.1" width="36" height="36"
@@ -76,7 +77,8 @@
             </svg>
             Markdown
         </h2>
-        <p class="text-gray-600 lg:mb-8">The questions support markdown. This allows you to better form you question. For
+        <p class="text-gray-600 lg:mb-8">The questions support markdown. This allows you to better form you question.
+            For
             example when you have a coding question you can use markdown to style you code which gives the teacher a
             better understanding of the question and results in answers which help the student better.</p>
         <a class="text-lg font-medium text-orange-600 hover:underline" href="/features">More features</a>
@@ -89,13 +91,13 @@
                 d="M414.83 120.61C452.11 166.71 550.42 206.8 550.42 270.17C550.42 381.25 479.24 413.37 381.53 454.86C348.08 469.07 246.72 521.01 207.98 521.01C56.09 521.01 0 419.28 0 270.17C0 199.34 91.77 199.02 137.26 150.82C187.54 97.55 195.47 0 275.21 0C362.55 0 364.4 58.24 414.83 120.61Z">
             </path>
         </svg> -->
-        <div class="bg-white w-5/6 mx-auto shadow-lg rounded-lg p-4">
+        <div class="bg-white w-5/6 mx-auto shadow hover:shadow-xl rounded-lg p-4">
             <img src="{{ .Site.BaseURL}}img/reply.png" alt="">
         </div>
     </div>
 </div>
 
-<div class="container mx-auto flex flex-col-reverse md:grid md:grid-cols-2 gap-4 lg:gap-40 p-4 mb-10 sm:mb-20 lg:mb-64 -z-1">
+<div class="container mx-auto flex flex-col-reverse md:grid md:grid-cols-2 gap-4 lg:gap-40 p-4 mb-10 sm:mb-20 lg:mb-64">
     <div class="relative fill-current text-orange-200">
         <!-- <svg class="absolute -z-1 transform -translate-y-24" version="1.1" xmlns="http://www.w3.org/2000/svg"
             xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid meet" viewBox="0 0 800 800"
@@ -104,13 +106,14 @@
                 d="M397.67 115.87C434.95 161.97 522.02 130.47 522.02 193.84C522.02 304.92 499.95 364.26 402.24 405.75C368.79 419.95 323.05 503.85 284.31 503.85C188.62 503.85 154.64 407.25 112.38 340.96C87.56 302.02 33.14 311.14 33.14 255.97C33.14 185.14 63.36 141.04 108.86 92.83C159.14 39.56 232.15 22.49 311.9 22.49C399.23 22.49 347.24 53.5 397.67 115.87Z">
             </path>
         </svg> -->
-        <div class="bg-white w-5/6 mx-auto shadow-lg rounded-lg p-4">
+        <div class="bg-white w-5/6 mx-auto shadow hover:shadow-xl rounded-lg p-4">
             <img src="{{ .Site.BaseURL}}img/reply.png" alt="">
         </div>
     </div>
     <div class="flex flex-col justify-center">
         <h2 class="text-3xl font-bold text-gray-900">Integration</h2>
-        <p class="text-gray-600 lg:mb-8">The questions support markdown. This allows you to better form you question. For
+        <p class="text-gray-600 lg:mb-8">The questions support markdown. This allows you to better form you question.
+            For
             example when you have a coding question you can use markdown to style you code which gives the teacher a
             better understanding of the question and results in answers which help the student better.</p>
         <a class="text-lg font-medium text-orange-600 hover:underline" href="/integration">More integrations</a>
@@ -118,9 +121,11 @@
 </div>
 
 <!-- Stats section -->
-<div class="bg-gray-200 mb-10 sm:mb-20 lg:mb-56 text-center p-4 pt-16 -z-1">
-    <h2 class="font-bold text-2xl sm:text-3xl md:text-4xl text-gray-900 mb-2">Trusted by teachers from over 1 university</h2>
-    <h3 class="sm:text-lg md:text-xl text-gray-600 -mb-8">Lorem ipsum, sit amet consectetur adipisicing elit. Repellendus repellat
+<!-- <div class="bg-gray-200 mb-10 sm:mb-20 lg:mb-56 text-center p-4 pt-16 -z-1">
+    <h2 class="font-bold text-2xl sm:text-3xl md:text-4xl text-gray-900 mb-2">Trusted by teachers from over 1 university
+    </h2>
+    <h3 class="sm:text-lg md:text-xl text-gray-600 -mb-8">Lorem ipsum, sit amet consectetur adipisicing elit.
+        Repellendus repellat
         laudantium.</h3>
 
     <div
@@ -138,7 +143,7 @@
             <span class="text-lg text-gray-600">Tickets</span>
         </div>
     </div>
-</div>
+</div> -->
 
 <!-- Frequently asked questions -->
 <div class="container mx-auto divide-y-2 divide-gray-200 p-4 mb-10 lg:mb-40">
@@ -146,18 +151,18 @@
     <div class="flex flex-col space-y-2 sm:space-y-0 sm:grid sm:grid-cols-2 grid-rows-3 py-4 md:gap-8">
         <div>
             <span class="md:text-xl text-gray-900 font-medium mb-2">I don't like our current mailinglist.</span>
-            <p class="text-sm text-gray-600">We totally get it and that's exactly the reason we build TicketVise. We streamline
-                the process of students asking questions.</p>
+            <p class="text-sm text-gray-600">We totally get it and that's exactly the reason we build TicketVise. We
+                streamline the process of students asking questions.</p>
         </div>
         <div>
             <span class="md:text-xl text-gray-900 font-medium mb-2">How does it work?</span>
-            <p class="text-sm text-gray-600">Students ask questions which land in a clean over board to track the questions per
-                course. This gives you a clear overview of which questions need to be answered.</p>
+            <p class="text-sm text-gray-600">Students ask questions which land on a clean board to track the
+                questions per course. This gives you a clear overview of which questions need to be answered.</p>
         </div>
         <div>
             <span class="md:text-xl text-gray-900 font-medium mb-2">Can I integrate TicketVise with my LMS?</span>
-            <p class="text-sm text-gray-600">Yes! We currently only support Canvas but are expending into other platforms. If
-                you have a specific platform you would like, let us know!</p>
+            <p class="text-sm text-gray-600">Yes! We currently only support Canvas but are expending into other
+                platforms. If you have a specific platform you would like, let us know!</p>
         </div>
         <div>
             <span class="md:text-xl text-gray-900 font-medium mb-2">How does TicketVise contribute to didactic skills of
@@ -167,27 +172,30 @@
         </div>
         <div>
             <span class="md:text-xl text-gray-900 font-medium mb-2">I don't want to assign each question myself.</span>
-            <p class="text-sm text-gray-600">We neither! TicketVise therefore includes streamlining the process using workflows.
-                Which automates the process of assigning questions to assistants.</p>
+            <p class="text-sm text-gray-600">We neither! TicketVise therefore includes streamlining the process using
+                workflows. Which automates the process of assigning questions to assistants.</p>
         </div>
         <div>
             <span class="md:text-xl text-gray-900 font-medium mb-2">Can I discuss the questions with the rest of the
                 team?</span>
-            <p class="text-sm text-gray-600">Yes, we can chat directly in TicketVise with the team. You can even mention people
-                or another question.</p>
+            <p class="text-sm text-gray-600">Yes, you can chat directly in TicketVise with the team. You can even
+                mention people or another question.</p>
         </div>
     </div>
 </div>
 
 <!-- Request a demo banner. -->
 <div class="bg-orange-200 mb-10 lg:mb-32">
-    <div class="max-w-screen-xl mx-auto py-12 px-4 sm:px-6 lg:py-12 lg:px-8 lg:flex lg:items-center lg:justify-between">
-        <h2 class="text-2xl md:text-3xl md:leading-9 font-extrabold tracking-tight text-gray-900 sm:text-4xl leading-tight">
+    <div
+        class="max-w-screen-xl mx-auto py-12 px-4 sm:px-6 lg:py-12 lg:px-8 lg:flex lg:items-center text-center lg:text-left lg:justify-between">
+        <h2
+            class="text-2xl md:text-3xl md:leading-9 font-extrabold tracking-tight text-gray-900 sm:text-4xl leading-tight">
             Ready to dive in?
             <br>
-            <span class="text-orange-600">Check out the demo environment!</span>
+            <span class="text-orange-600">Contact us at: <a href="mailto:info@ticketvise.com"
+                    class="underline">info@ticketvise.com</span></span>
         </h2>
-        <div class="mt-8 flex justify-center lg:flex-shrink-0 lg:mt-0">
+        <!-- <div class="mt-8 flex justify-center lg:flex-shrink-0 lg:mt-0">
             <div class="inline-flex rounded-md shadow">
                 <a href="#"
                     class="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-orange-600 hover:bg-orange-500 focus:outline-none focus:shadow-outline transition duration-150 ease-in-out">
@@ -200,20 +208,92 @@
                     Guides
                 </a>
             </div>
-        </div>
+        </div> -->
     </div>
 </div>
 
 <!-- Quotes section. -->
-<div class="container mx-auto flex flex-col justify-center text-center mb-10 lg:mb-32 p-4">
-    <img class="h-12 mx-auto mb-6" src="{{ .Site.BaseURL}}img/logo.png" alt="">
-    <span class="lg:w-1/2 md:w-3/4 mx-auto text-xl mb-6">"Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium,
-        dicta laudantium, optio veritatis quas impedit quae et necessitatibus porro placeat temporibus repellat aut
-        nulla qui nam excepturi corrupti blanditiis quod?"</span>
-    <div class="flex h-8 mx-auto items-center">
-        <img class="w-8 h-8 rounded-full mr-4" src="{{ .Site.BaseURL}}img/ivan.jpg" alt="">
-        <span class="pr-4 text-gray-900 border-r-2 border-orange-600">Ivan de Wolf</span>
-        <span class="pl-4 text-gray-500">Co-Founder, TicketVise</span>
+<div class="container mx-auto mb-10 lg:mb-32 p-4 relative" x-data="{ activeSlide: 1, slides: [1, 2, 3] }">
+    <!-- Slides -->
+    <div x-show="activeSlide === 1" class="flex flex-col justify-center text-center w-3/4 md:w-full mx-auto">
+        <a href="/" class="flex items-center mx-auto mb-2">
+            <img class="h-8 w-auto" src="{{ .Site.BaseURL}}img/logo.svg" alt="Workflow">
+            <span class="text-2xl ml-2">Ticket</span><span class="text-2xl text-orange-500 font-bold">Vise</span>
+        </a>
+        <span class="lg:w-1/2 md:w-3/4 mx-auto text-xl mb-6">"As an assistant myself, I believe we will improve
+            the
+            experience of answering questions for students but also for teachers and the assistants which will
+            significantly
+            help teaching."</span>
+        <div class="flex h-8 mx-auto items-center">
+            <img class="w-8 h-8 rounded-full mr-4" src="{{ .Site.BaseURL}}img/ivan.jpg" alt="">
+            <span class="pr-4 text-gray-900 border-r-2 border-orange-600">Ivan de Wolf</span>
+            <span class="pl-4 text-gray-500">Co-Founder, TicketVise</span>
+        </div>
+    </div>
+    <div x-show="activeSlide === 2" class="flex flex-col justify-center text-center w-3/4 md:w-full mx-auto">
+        <a href="/" class="flex items-center mx-auto mb-2">
+            <img class="h-8 w-auto" src="{{ .Site.BaseURL}}img/logo.svg" alt="Workflow">
+            <span class="text-2xl ml-2">Ticket</span><span class="text-2xl text-orange-500 font-bold">Vise</span>
+        </a>
+        <span class="lg:w-1/2 md:w-3/4 mx-auto text-xl mb-6">"As an assistant myself, I believe we will improve
+            the
+            experience of answering questions for students but also for teachers and the assistants which will
+            significantly
+            help teaching."</span>
+        <div class="flex h-8 mx-auto items-center">
+            <img class="w-8 h-8 rounded-full mr-4" src="{{ .Site.BaseURL}}img/ruben.jpg" alt="">
+            <span class="pr-4 text-gray-900 border-r-2 border-orange-600">Ruben Jonk</span>
+            <span class="pl-4 text-gray-500">Co-Founder, TicketVise</span>
+        </div>
+    </div>
+    <div x-show="activeSlide === 3" class="flex flex-col justify-center text-center w-3/4 md:w-full mx-auto">
+        <a href="/" class="flex items-center mx-auto mb-2">
+            <img class="h-8 w-auto" src="{{ .Site.BaseURL}}img/logo.svg" alt="Workflow">
+            <span class="text-2xl ml-2">Ticket</span><span class="text-2xl text-orange-500 font-bold">Vise</span>
+        </a>
+        <span class="lg:w-1/2 md:w-3/4 mx-auto text-xl mb-6">"As an assistant myself, I believe we will improve
+            the
+            experience of answering questions for students but also for teachers and the assistants which will
+            significantly
+            help teaching."</span>
+        <div class="flex h-8 mx-auto items-center">
+            <img class="w-8 h-8 rounded-full mr-4" src="{{ .Site.BaseURL}}img/tom.jpg" alt="">
+            <span class="pr-4 text-gray-900 border-r-2 border-orange-600">Tom J. Wassing</span>
+            <span class="pl-4 text-gray-500">Co-Founder, TicketVise</span>
+        </div>
+    </div>
+
+    <!-- Prev/Next Arrows -->
+    <div class="absolute inset-0 flex">
+        <div class="flex items-center justify-start w-1/2">
+            <button
+                class="text-orange-500 hover:text-orange-600 font-bold w-12 h-12 text-3xl"
+                x-on:click="activeSlide = activeSlide === 1 ? slides.length : activeSlide - 1">
+                &lsaquo;
+            </button>
+        </div>
+        <div class="flex items-center justify-end w-1/2">
+            <button
+                class="text-orange-500 hover:text-orange-600 font-bold w-12 h-20 text-3xl"
+                x-on:click="activeSlide = activeSlide === slides.length ? 1 : activeSlide + 1">
+                &rsaquo;
+            </button>
+        </div>
+    </div>
+
+    <!-- Buttons -->
+    <div class="mx-auto w-2/4 lg:w-1/4">
+        <div class="absolute w-2/4 lg:w-1/4 mt-2 flex items-center justify-center space-x-4">
+            <template x-for="slide in slides" :key="slide">
+                <button
+                    class="flex-1 w-4 h-2 mt-4 mx-2 mb-0 rounded-full overflow-hidden transition-colors duration-200 ease-out hover:bg-orange-400 hover:shadow-lg"
+                    :class="{
+                    'bg-orange-500': activeSlide === slide,
+                    'bg-orange-200': activeSlide !== slide
+                }" x-on:click="activeSlide = slide"></button>
+            </template>
+        </div>
     </div>
 </div>
 {{ end }}

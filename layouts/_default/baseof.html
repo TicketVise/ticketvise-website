@@ -8,12 +8,12 @@
 <body class="flex flex-col min-h-screen" x-data="{ atTop: true, menu: false }"
     x-on:scroll.window="atTop = (window.pageYOffset > 0) ? false : true">
     <!-- This example requires Tailwind CSS v1.4.0+ -->
-    <div class="bg-transparent sticky top-0" x-bind:class="{ 'bg-white shadow-lg': !atTop }">
+    <div class="bg-transparent sticky top-0 z-50" x-bind:class="{ 'bg-white shadow-lg': !atTop }">
         <div class="max-w-7xl mx-auto px-4 sm:px-6">
             <div class="flex justify-between items-center py-3 md:justify-start md:space-x-10">
                 <div class="lg:w-0 lg:flex-1">
                     <a href="/" class="flex items-center">
-                        <img class="h-8 w-auto sm:h-10"
+                        <img class="h-8 w-auto"
                             src="{{ .Site.BaseURL}}img/logo.svg" alt="Workflow">
                         <span class="text-2xl ml-2">Ticket</span><span class="text-2xl text-orange-500 font-bold">Vise</span>
                     </a>
@@ -443,12 +443,12 @@
                     </div>
                 </nav>
                 <div class="flex items-center justify-end space-x-8 md:flex-1 lg:w-0">
-                    <span class="inline-flex rounded-md shadow-sm">
+                    <!-- <span class="inline-flex rounded-md shadow-sm">
                         <a href="#"
                             class="whitespace-no-wrap inline-flex items-center justify-center px-4 py-2 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-orange-600 hover:bg-orange-500 focus:outline-none focus:border-orange-700 focus:shadow-outline-orange active:bg-orange-700 transition ease-in-out duration-150">
                             Demo
                         </a>
-                    </span>
+                    </span> -->
                 </div>
             </div>
         </div>
