@@ -8,7 +8,7 @@
 <body class="flex flex-col min-h-screen" x-data="{ atTop: true, menu: false }"
     x-on:scroll.window="atTop = (window.pageYOffset > 0) ? false : true">
     <!-- This example requires Tailwind CSS v1.4.0+ -->
-    <div class="bg-transparent sticky top-0 z-50" x-bind:class="{ 'bg-white shadow-lg': !atTop }">
+    <div class="sticky top-0 z-50" x-bind:class="{ 'bg-white shadow-lg': !atTop, 'bg-orange-200': atTop }">
         <div class="max-w-7xl mx-auto px-4 sm:px-6">
             <div class="flex justify-between items-center py-3 md:justify-start md:space-x-10">
                 <div class="lg:w-0 lg:flex-1">
@@ -592,7 +592,7 @@
         </div>
     </div>
 
-    <main class="w-full flex flex-col flex-grow pt-12 mx-auto overflow-y-auto">
+    <main class="w-full flex flex-col flex-grow mx-auto overflow-y-auto">
         {{ block "main" . }}{{ end }}
     </main>
     {{ partial "footer.html" . }}
