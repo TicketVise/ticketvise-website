@@ -309,20 +309,20 @@
 <!-- Multiple Quotes section. -->
 <div class="container mx-auto mb-10 lg:mb-32 p-4 relative" x-data="{ activeSlide: 1, slides: [1, 2, 3] }">
     <!-- Slides -->
-    <div x-show="activeSlide === 1" class="flex flex-col justify-center text-center w-3/4 md:w-full mx-auto">
+    <div x-show="activeSlide === 1" class="flex flex-col justify-center text-center w-full mx-auto">
         <a href="/" class="flex items-center mx-auto mb-2">
             <img class="h-8 w-auto" src="{{ .Site.BaseURL}}img/logo.svg" alt="Workflow">
             <span class="text-2xl ml-2">Ticket</span><span class="text-2xl text-orange-500 font-bold">Vise</span>
         </a>
-        <span class="lg:w-1/2 md:w-3/4 mx-auto text-xl mb-6">"As an assistant myself, I believe we will improve
-            the
+        <span class="lg:w-1/2 md:w-3/4 mx-auto text-xl mb-6">"As an assistant myself, I believe we will improve the
             experience of answering questions for students but also for teachers and the assistants which will
-            significantly
-            help teaching."</span>
-        <div class="flex h-8 mx-auto items-center">
+            significantly help teaching."</span>
+        <div class="flex h-8 mx-auto items-center divide-x-2 sm:divide-x-0 divide-orange-500">
             <img class="w-8 h-8 rounded-full mr-4" src="{{ .Site.BaseURL}}img/ivan.jpg" alt="">
-            <span class="pr-4 text-gray-900 border-r-2 border-orange-600">Ivan de Wolf</span>
-            <span class="pl-4 text-gray-500">Co-Founder, TicketVise</span>
+            <div class="flex flex-col pl-4 sm:pl-0 sm:flex-row text-left">
+                <span class="pr-4 text-gray-900 sm:border-r-2 sm:border-orange-600">Ivan de Wolf</span>
+                <span class="sm:pl-4 text-gray-500">Co-Founder, TicketVise</span>
+            </div>
         </div>
     </div>
     <!-- <div x-show="activeSlide === 2" class="flex flex-col justify-center text-center w-3/4 md:w-full mx-auto">
