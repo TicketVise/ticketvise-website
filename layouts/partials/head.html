@@ -2,15 +2,18 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="preload" href="{{ .Site.BaseURL}}css/page.css" as="style">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="description"
-  content="{{ with .Description }}{{ . }}{{ else }}{{ if .IsPage }}{{ .Summary }}{{ else }}{{ .Site.Params.description }}{{ end }}{{ end }}">
-<meta name="author" content="{{ .Site.Params.author }}">
+<meta name="description" content="Students have questions that need answers. We want to help you streamline that process so you can focus on the teaching part.">
 <meta name="robots" content="index,follow">
 <title>TicketVise</title>
-<meta name="theme-color" content="#ffffff">
+<meta name="theme-color" content="#ED8936">
 <link rel="stylesheet" href="{{ .Site.BaseURL}}css/page.css">
 <link rel="shortcut icon" type="image/png" href="{{ .Site.BaseURL}}img/logo.svg">
-<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+<meta property="og:title" content="TicketVise" />
+<meta property="og:url" content="https://ticketvise.com" />
+<meta property="og:description" content="Students have questions that need answers. We want to help you streamline that process so you can focus on the teaching part.">
+<meta property="og:image" content="{{ .Site.BaseURL}}img/logo.svg">
+
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-175323355-1"></script>
 <script>
@@ -20,4 +23,3 @@
 
   gtag('config', 'UA-175323355-1');
 </script>
-
