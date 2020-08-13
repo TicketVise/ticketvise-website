@@ -287,7 +287,7 @@
 <!-- Multiple Quotes section. -->
 <div class="container mx-auto mb-10 lg:mb-32 p-4 relative" x-data="{ activeSlide: 1, slides: [1, 2, 3] }">
     <!-- Slides -->
-    <div x-show="activeSlide === 1" class="flex flex-col justify-center text-center w-full mx-auto">
+    <div x-show="activeSlide === 1" class="flex flex-col justify-center text-center w-3/4 md:w-full mx-auto">
         <a href="/" class="flex items-center mx-auto mb-2">
             <img class="h-8 w-auto" src="{{ .Site.BaseURL}}img/logo.svg" alt="Workflow">
             <span class="text-2xl ml-2 text-gray-800">Ticket</span><span
@@ -304,16 +304,12 @@
             </div>
         </div>
     </div>
-    <!-- <div x-show="activeSlide === 2" class="flex flex-col justify-center text-center w-3/4 md:w-full mx-auto">
+    <div x-show="activeSlide === 2" class="flex flex-col justify-center text-center w-3/4 md:w-full mx-auto">
         <a href="/" class="flex items-center mx-auto mb-2">
             <img class="h-8 w-auto" src="{{ .Site.BaseURL}}img/logo.svg" alt="Workflow">
             <span class="text-2xl ml-2">Ticket</span><span class="text-2xl text-orange-500 font-bold">Vise</span>
         </a>
-        <span class="lg:w-1/2 md:w-3/4 mx-auto text-xl mb-6">"As an assistant myself, I believe we will improve
-            the
-            experience of answering questions for students but also for teachers and the assistants which will
-            significantly
-            help teaching."</span>
+        <span class="lg:w-1/2 md:w-3/4 mx-auto text-xl mb-6">"Ticketvise allows us to translate our own experience as a student into a new product that can benefit many people."</span>
         <div class="flex h-8 mx-auto items-center">
             <img class="w-8 h-8 rounded-full mr-4" src="{{ .Site.BaseURL}}img/ruben.jpg" alt="">
             <span class="pr-4 text-gray-900 border-r-2 border-orange-600">Ruben Jonk</span>
@@ -325,20 +321,16 @@
             <img class="h-8 w-auto" src="{{ .Site.BaseURL}}img/logo.svg" alt="Workflow">
             <span class="text-2xl ml-2">Ticket</span><span class="text-2xl text-orange-500 font-bold">Vise</span>
         </a>
-        <span class="lg:w-1/2 md:w-3/4 mx-auto text-xl mb-6">"As an assistant myself, I believe we will improve
-            the
-            experience of answering questions for students but also for teachers and the assistants which will
-            significantly
-            help teaching."</span>
+        <span class="lg:w-1/2 md:w-3/4 mx-auto text-xl mb-6">"My experience with mailinglists as a student are mixed. The mailinglists offer great accessibility, but answer can come slow or sometimes not. With TicketVise we want to achieve high accessibility and solve the issues that come with mailinglists."</span>
         <div class="flex h-8 mx-auto items-center">
             <img class="w-8 h-8 rounded-full mr-4" src="{{ .Site.BaseURL}}img/tom.jpg" alt="">
             <span class="pr-4 text-gray-900 border-r-2 border-orange-600">Tom J. Wassing</span>
             <span class="pl-4 text-gray-500">Co-Founder, TicketVise</span>
         </div>
-    </div> -->
+    </div>
 
     <!-- Prev/Next Arrows -->
-    <!-- <div class="absolute inset-0 flex">
+    <div class="absolute inset-0 flex">
         <div class="flex items-center justify-start w-1/2">
             <button class="text-orange-500 hover:text-orange-600 font-bold w-12 h-12 text-3xl"
                 x-on:click="activeSlide = activeSlide === 1 ? slides.length : activeSlide - 1">
@@ -351,20 +343,20 @@
                 &rsaquo;
             </button>
         </div>
-    </div> -->
+    </div>
 
     <!-- Buttons -->
-    <!-- <div class="mx-auto w-2/4 lg:w-1/4">
-        <div class="absolute w-2/4 lg:w-1/4 mt-2 flex items-center justify-center space-x-4">
+    <div class="mx-auto w-3/4 lg:w-1/4">
+        <div class="absolute w-3/4 lg:w-1/4 mt-2 flex items-center justify-center space-x-4">
             <template x-for="slide in slides" :key="slide">
                 <button
-                    class="flex-1 w-4 h-2 mt-4 mx-2 mb-0 rounded-full overflow-hidden transition-colors duration-200 ease-out hover:bg-orange-400 hover:shadow-lg"
+                    class="flex-1 w-full h-2 mt-4 mb-0 rounded-full overflow-hidden transition-colors duration-200 ease-out hover:bg-orange-400 hover:shadow-lg"
                     :class="{
                     'bg-orange-500': activeSlide === slide,
                     'bg-orange-200': activeSlide !== slide
                 }" x-on:click="activeSlide = slide"></button>
             </template>
         </div>
-    </div> -->
+    </div>
 </div>
 {{ end }}
