@@ -26,7 +26,7 @@ gulp.task('build-css', function () {
         require('autoprefixer'),
       ]))
       .pipe(purgecss({
-        content: ['./layouts/**/*.html','./content/**/*.md'],
+        content: ['./layouts/**/*.html','./content/**/*.html'],
         defaultExtractor: content => content.match(/[\w-/:]+(?<!:)/g) || [],
         whitelist: [':focus', 'button', 'button:focus'],
         // whitelistPatterns: [/(:\w+)/g]
