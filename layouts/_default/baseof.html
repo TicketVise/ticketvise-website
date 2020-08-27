@@ -11,7 +11,7 @@
     <div class="sticky top-0 z-50" x-bind:class="{ 'bg-white shadow-lg': !atTop, 'bg-orange-200': atTop }">
         <div class="max-w-7xl mx-auto px-4 sm:px-6">
             <div class="flex justify-between items-center py-3 md:justify-start md:space-x-10">
-                <div class="lg:w-0 lg:flex-1">
+                <div class="">
                     <a href="/" class="flex items-center">
                         <img class="h-8 w-auto"
                             src="{{ .Site.BaseURL}}img/logo.svg" alt="Workflow">
@@ -27,9 +27,9 @@
                         </svg>
                     </button>
                 </div>
-                <nav class="hidden space-x-10">
+                <nav class="hidden md:flex space-x-10">
                     <!-- md:flex -->
-                    <div class="relative" x-data="{ open: false }">
+                    <div class="relative hidden" x-data="{ open: false }">
                         <!-- Item active: "text-gray-900", Item inactive: "text-gray-500" -->
                         <button type="button"
                             class="menu-item text-gray-500 group inline-flex items-center space-x-2 text-base leading-6 font-medium hover:text-gray-900 focus:outline-none focus:text-gray-900 transition ease-in-out duration-150"
@@ -125,15 +125,16 @@
                         </div>
                     </div>
 
-                    <div class="relative" x-data="{ open: false }">
+                    <div class="relative" x-data="{ open: false, atTop: true }" x-on:scroll.window="atTop = (window.pageYOffset > 0) ? false : true">
                         <!-- Item active: "text-gray-900", Item inactive: "text-gray-500" -->
                         <button type="button"
-                            class="text-gray-500 inline-flex items-center space-x-2 text-base leading-6 font-medium hover:text-gray-900 focus:outline-none focus:text-gray-900 transition ease-in-out duration-150"
+                            class="group inline-flex items-center space-x-2 text-base leading-6 font-medium hover:text-orange-600 focus:outline-none focus:text-orange-600 transition ease-in-out duration-150"
+                            x-bind:class="{ 'text-gray-500': !atTop, 'text-orange-500': atTop }"
                             @click="open = !open">
                             <span>Support</span>
                             <!-- Item active: "text-gray-600", Item inactive: "text-gray-400" -->
-                            <svg class="text-gray-400 h-5 w-5 group-hover:text-gray-500 group-focus:text-gray-500 transition ease-in-out duration-150"
-                                viewBox="0 0 20 20" fill="currentColor">
+                            <svg class="h-5 w-5 group-hover:text-orange-600 group-focus:text-orange-600 transition ease-in-out duration-150"
+                                viewBox="0 0 20 20" fill="currentColor" x-bind:class="{ 'text-gray-400': !atTop, 'text-orange-500': atTop }">
                                 <path fill-rule="evenodd"
                                     d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
                                     clip-rule="evenodd" />
@@ -151,47 +152,7 @@
                             <div class="rounded-lg shadow-lg">
                                 <div class="rounded-lg shadow-xs overflow-hidden">
                                     <div class="z-20 relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
-                                        <a href="#"
-                                            class="-m-3 p-3 flex items-start space-x-4 rounded-lg hover:bg-gray-100 transition ease-in-out duration-150">
-                                            <svg class="flex-shrink-0 h-6 w-6 text-orange-600" fill="none"
-                                                viewBox="0 0 24 24" stroke="currentColor">
-                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                    d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z" />
-                                            </svg>
-                                            <div class="space-y-1">
-                                                <p class="text-base leading-6 font-medium text-gray-900">
-                                                    Help Center
-                                                </p>
-                                                <p class="text-sm leading-5 text-gray-500">
-                                                    Get all of your questions answered in our forums or contact support.
-                                                </p>
-                                            </div>
-                                        </a>
-                                        <a href="#"
-                                            class="-m-3 p-3 flex items-start space-x-4 rounded-lg hover:bg-gray-100 transition ease-in-out duration-150">
-                                            <svg class="flex-shrink-0 h-6 w-6 text-orange-600" fill="currentColor"
-                                                viewBox="0 0 512 512" stroke="currentColor">
-                                                <path
-                                                    d="M459.36,100.64l-96-96C360.341,1.645,356.253-0.024,352,0H96c-26.51,0-48,21.49-48,48v416c0,26.51,21.49,48,48,48h320 c26.51,0,48-21.49,48-48V112C464.025,107.747,462.355,103.66,459.36,100.64z M432,464c0,8.837-7.163,16-16,16H96 c-8.837,0-16-7.163-16-16V48c0-8.837,7.163-16,16-16h240v64c0,17.673,14.327,32,32,32h64V464z" />
-                                                <path
-                                                    d="M176,176c-26.51,0-48,21.49-48,48c0,26.51,21.49,48,48,48c26.51,0,48-21.49,48-48C224,197.491,202.51,176,176,176z M176,240c-8.837,0-16-7.163-16-16s7.163-16,16-16s16,7.163,16,16S184.837,240,176,240z" />
-                                                <path
-                                                    d="M176,336c-26.51,0-48,21.49-48,48c0,26.51,21.49,48,48,48c26.51,0,48-21.49,48-48C224,357.491,202.51,336,176,336z M176,400c-8.837,0-16-7.163-16-16s7.163-16,16-16s16,7.163,16,16S184.837,400,176,400z" />
-                                                <rect x="256" y="176" width="128" height="32" />
-                                                <rect x="256" y="240" width="64" height="32" />
-                                                <rect x="256" y="336" width="128" height="32" />
-                                                <rect x="256" y="400" width="64" height="32" />
-                                            </svg>
-                                            <div class="space-y-1">
-                                                <p class="text-base leading-6 font-medium text-gray-900">
-                                                    Documentation
-                                                </p>
-                                                <p class="text-sm leading-5 text-gray-500">
-                                                    Learn how to maximize our platform to get the most out of it.
-                                                </p>
-                                            </div>
-                                        </a>
-                                        <a href="#"
+                                        <a href="/getting-started/"
                                             class="-m-3 p-3 flex items-start space-x-4 rounded-lg hover:bg-gray-100 transition ease-in-out duration-150">
                                             <svg class="flex-shrink-0 h-6 w-6 text-orange-600" fill="none"
                                                 viewBox="0 0 24 24" stroke="currentColor">
@@ -200,14 +161,26 @@
                                             </svg>
                                             <div class="space-y-1">
                                                 <p class="text-base leading-6 font-medium text-gray-900">
-                                                    Guides
+                                                    Getting Started
                                                 </p>
                                                 <p class="text-sm leading-5 text-gray-500">
-                                                    Learn how to maximize our platform to get the most out of it.
+                                                    Per role information about the functionalities.
                                                 </p>
                                             </div>
                                         </a>
-                                        <a href="#"
+                                        <a href="https://github.com/TicketVise/ticketvise"
+                                            class="-m-3 p-3 flex items-start space-x-4 rounded-lg hover:bg-gray-100 transition ease-in-out duration-150">
+                                            <i class="text-orange-600 h-6 w-6 p-1 fab fa-github"></i>
+                                            <div class="space-y-1">
+                                                <p class="text-base leading-6 font-medium text-gray-900">
+                                                    GitHub
+                                                </p>
+                                                <p class="text-sm leading-5 text-gray-500">
+                                                    The code with documentation about deploying.
+                                                </p>
+                                            </div>
+                                        </a>
+                                        <a class="hidden" href="#"
                                             class="-m-3 p-3 flex items-start space-x-4 rounded-lg hover:bg-gray-100 transition ease-in-out duration-150">
                                             <svg class="flex-shrink-0 h-6 w-6 text-orange-600" fill="currentColor"
                                                 viewBox="0 0 512.001 512.001" stroke="currentColor">
@@ -228,13 +201,29 @@
                                                 </p>
                                             </div>
                                         </a>
+                                        <a class="hidden" href="/getting-started/"
+                                            class="-m-3 p-3 flex items-start space-x-4 rounded-lg hover:bg-gray-100 transition ease-in-out duration-150">
+                                            <svg class="flex-shrink-0 h-6 w-6 text-orange-600" fill="none"
+                                                viewBox="0 0 24 24" stroke="currentColor">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z" />
+                                            </svg>
+                                            <div class="space-y-1">
+                                                <p class="text-base leading-6 font-medium text-gray-900">
+                                                    Getting Started
+                                                </p>
+                                                <p class="text-sm leading-5 text-gray-500">
+                                                    Per role information about the functionalities.
+                                                </p>
+                                            </div>
+                                        </a>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    <div class="relative" x-data="{ open: false }">
+                    <div class="relative hidden" x-data="{ open: false }">
                         <!-- Item active: "text-gray-900", Item inactive: "text-gray-500" -->
                         <button type="button"
                             class="text-gray-500 inline-flex items-center space-x-2 text-base leading-6 font-medium hover:text-gray-900 focus:outline-none focus:text-gray-900 transition ease-in-out duration-150"
@@ -354,7 +343,7 @@
                         </div>
                     </div>
 
-                    <div class="relative" x-data="{ open: false }">
+                    <div class="relative hidden" x-data="{ open: false }">
                         <!-- Item active: "text-gray-900", Item inactive: "text-gray-500" -->
                         <button type="button"
                             class="text-gray-500 inline-flex items-center space-x-2 text-base leading-6 font-medium hover:text-gray-900 focus:outline-none focus:text-gray-900 transition ease-in-out duration-150"
