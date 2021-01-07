@@ -2,328 +2,184 @@
 title: "TicketVise"
 date: 2020-07-31T11:05:44+02:00
 draft: false
-layout: default
+layout: home
 ---
 
-<div class="bg-gray-50">
-    <div class="relative overflow-hidden">
-        <div class="absolute inset-y-0 h-full w-full" aria-hidden="true">
-            <div class="relative h-full">
-                <svg class="absolute right-full transform translate-y-1/3 translate-x-1/4 md:translate-y-1/2 sm:translate-x-1/2 lg:translate-x-full"
-                    width="404" height="784" fill="none" viewBox="0 0 404 784">
-                    <defs>
-                        <pattern id="e229dbec-10e9-49ee-8ec3-0286ca089edf" x="0" y="0" width="20" height="20"
-                            patternUnits="userSpaceOnUse">
-                            <rect x="0" y="0" width="4" height="4" class="text-gray-200" fill="currentColor" />
-                        </pattern>
-                    </defs>
-                    <rect width="404" height="784" fill="url(#e229dbec-10e9-49ee-8ec3-0286ca089edf)" />
-                </svg>
-                <svg class="absolute left-full transform -translate-y-3/4 -translate-x-1/4 sm:-translate-x-1/2 md:-translate-y-1/2 lg:-translate-x-3/4"
-                    width="404" height="784" fill="none" viewBox="0 0 404 784">
-                    <defs>
-                        <pattern id="d2a68204-c383-44b1-b99f-42ccff4e5365" x="0" y="0" width="20" height="20"
-                            patternUnits="userSpaceOnUse">
-                            <rect x="0" y="0" width="4" height="4" class="text-gray-200" fill="currentColor" />
-                        </pattern>
-                    </defs>
-                    <rect width="404" height="784" fill="url(#d2a68204-c383-44b1-b99f-42ccff4e5365)" />
-                </svg>
-            </div>
-        </div>
-
-        <div class="relative pt-6 pb-16 sm:pb-24" x-data="{ dropdown: false }">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6">
-                <nav class="relative flex items-center justify-between sm:h-10 md:justify-center" aria-label="Global">
-                    <div class="flex items-center flex-1 md:absolute md:inset-y-0 md:left-0">
-                        <div class="flex items-center justify-between w-full md:w-auto">
-                            <a href="/">
-                                <span class="sr-only">TicketVise</span>
-                                <img class="h-8 w-auto sm:h-10" src="/img/logo.svg" alt="">
-                            </a>
-                            <div class="-mr-2 flex items-center md:hidden">
-                                <button @click="dropdown = true" type="button"
-                                    class="bg-gray-50 rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500"
-                                    id="main-menu" aria-haspopup="true">
-                                    <span class="sr-only">Open main menu</span>
-                                    <!-- Heroicon name: menu -->
-                                    <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none"
-                                        viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                            d="M4 6h16M4 12h16M4 18h16" />
-                                    </svg>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="hidden md:flex md:space-x-10">
-                        <a href="#" class="font-medium text-gray-500 hover:text-gray-900">Support</a>
-
-                        <a href="#" class="font-medium text-gray-500 hover:text-gray-900">Features</a>
-
-                        <a href="#" class="font-medium text-gray-500 hover:text-gray-900">Company</a>
-                    </div>
-                </nav>
-            </div>
-
-            <!--
-            Mobile menu, show/hide based on menu open state.
-    
-            Entering: "duration-150 ease-out"
-                From: "opacity-0 scale-95"
-                To: "opacity-100 scale-100"
-            Leaving: "duration-100 ease-in"
-                From: "opacity-100 scale-100"
-                To: "opacity-0 scale-95"
-            -->
-            <div x-show="dropdown" x-transition:enter="duration-150 ease-out"
-                x-transition:enter-start="opacity-0 scale-95" x-transition:enter-end="opacity-100 scale-100"
-                x-transition:leave="duration-100 ease-in" x-transition:leave-start="opacity-100 scale-100"
-                x-transition:leave-end="opacity-0 scale-95"
-                class="absolute top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden">
-                <div class="rounded-lg shadow-md bg-white ring-1 ring-black ring-opacity-5 overflow-hidden">
-                    <div class="px-5 pt-4 flex items-center justify-between">
-                        <div>
-                            <img class="h-8 w-auto" src="/img/logo.svg" alt="">
-                        </div>
-                        <div class="-mr-2">
-                            <button @click="dropdown = false" type="button"
-                                class="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
-                                <span class="sr-only">Close main menu</span>
-                                <!-- Heroicon name: x -->
-                                <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                    stroke="currentColor" aria-hidden="true">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M6 18L18 6M6 6l12 12" />
-                                </svg>
-                            </button>
-                        </div>
-                    </div>
-                    <div role="menu" aria-orientation="vertical" aria-labelledby="main-menu">
-                        <div class="px-2 pt-2 pb-3 space-y-1" role="none">
-                            <a href="#"
-                                class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50"
-                                role="menuitem">Support</a>
-
-                            <a href="#"
-                                class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50"
-                                role="menuitem">Features</a>
-
-                            <a href="#"
-                                class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50"
-                                role="menuitem">Company</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="mt-16 mx-auto max-w-7xl px-4 sm:mt-24 sm:px-6">
-                <div class="text-center">
-                    <h1 class="text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl">
-                        <span class="block">Let's focus on</span>
-                        <span class="block text-primary">answering questions</span>
-                    </h1>
-                    <p class="mt-3 max-w-md mx-auto text-base text-gray-500 sm:text-lg md:mt-5 md:text-xl md:max-w-3xl">
-                        Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit
-                        sunt amet fugiat veniam occaecat fugiat aliqua.
-                    </p>
-                </div>
-            </div>
-        </div>
-        <div class="relative">
-            <div class="absolute inset-0 flex flex-col" aria-hidden="true">
-                <div class="flex-1"></div>
-                <div class="flex-1 w-full bg-gray-800"></div>
-            </div>
-            <div class="max-w-7xl mx-auto px-4 sm:px-6">
-                <img class="relative rounded-lg shadow-lg" src="/img/inbox_overview_page.png" alt="App screenshot">
+<div class="bg-gray-800">
+    <div class="pt-12 sm:pt-16 lg:pt-24">
+        <div class="max-w-7xl mx-auto text-center px-4 sm:px-6 lg:px-8">
+            <div class="max-w-3xl mx-auto space-y-2 lg:max-w-none">
+                <!-- <h2 class="text-lg leading-6 font-semibold text-gray-300 uppercase tracking-wider">
+                    Why TicketVise
+                </h2> -->
+                <p class="text-3xl font-extrabold text-white sm:text-4xl lg:text-5xl">
+                    See how you can use Ticket<span class="text-primary">Vise</span>
+                </p>
+                <p class="text-xl text-gray-300">
+                    Different users want different functionalities so we splitted the information for you
+                </p>
             </div>
         </div>
     </div>
-    <div class="bg-gray-800">
-        <div class="pt-12 sm:pt-16 lg:pt-24">
-            <div class="max-w-7xl mx-auto text-center px-4 sm:px-6 lg:px-8">
-                <div class="max-w-3xl mx-auto space-y-2 lg:max-w-none">
-                    <!-- <h2 class="text-lg leading-6 font-semibold text-gray-300 uppercase tracking-wider">
-                        Why TicketVise
-                    </h2> -->
-                    <p class="text-3xl font-extrabold text-white sm:text-4xl lg:text-5xl">
-                        See how you can use TicketVise
-                    </p>
-                    <p class="text-xl text-gray-300">
-                        Different users want different functionalities so we splitted the information for you
-                    </p>
-                </div>
-            </div>
-        </div>
-        <div class="mt-8 pb-12 bg-gray-50 sm:mt-12 sm:pb-16 lg:mt-16 lg:pb-24">
-            <div class="relative">
-                <div class="absolute inset-0 h-3/4 bg-gray-800"></div>
-                <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <div class="max-w-md mx-auto space-y-4 lg:max-w-5xl lg:grid lg:grid-cols-2 lg:gap-5 lg:space-y-0">
-                        <div class="flex flex-col rounded-lg shadow-lg overflow-hidden">
-                            <div class="px-6 py-8 bg-white sm:p-10 sm:pb-6">
-                                <div class="mt-4 flex items-baseline text-6xl font-extrabold">
-                                    Teachers
-                                </div>
-                                <p class="mt-5 text-lg text-gray-500">
-                                    You prefer to spend your time teaching and answering questions as efficient as
-                                    possible.
-                                </p>
+    <div class="mt-8 pb-12 bg-gray-50 sm:mt-12 sm:pb-16 lg:mt-16 lg:pb-24">
+        <div class="relative">
+            <div class="absolute inset-0 h-3/4 bg-gray-800"></div>
+            <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="max-w-md mx-auto space-y-4 lg:max-w-5xl lg:grid lg:grid-cols-2 lg:gap-5 lg:space-y-0">
+                    <div class="flex flex-col rounded-lg shadow-lg overflow-hidden">
+                        <div class="px-6 py-8 bg-white sm:p-10 sm:pb-6">
+                            <div class="mt-4 flex items-baseline text-6xl font-extrabold">
+                                Teachers
                             </div>
-                            <div
-                                class="flex-1 flex flex-col justify-between px-6 pt-6 pb-8 bg-gray-50 space-y-6 sm:p-10 sm:pt-6">
-                                <ul class="space-y-4">
-                                    <li class="flex items-start">
-                                        <div class="flex-shrink-0">
-                                            <!-- Heroicon name: check -->
-                                            <svg class="h-6 w-6 text-primary" xmlns="http://www.w3.org/2000/svg"
-                                                fill="none" viewBox="0 0 24 24" stroke="currentColor"
-                                                aria-hidden="true">
-                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                    d="M5 13l4 4L19 7" />
-                                            </svg>
-                                        </div>
-                                        <p class="ml-3 text-base text-gray-700">
-                                            Clean overview
-                                        </p>
-                                    </li>
+                            <p class="mt-5 text-lg text-gray-500">
+                                You prefer to spend your time teaching and answering questions as efficient as
+                                possible.
+                            </p>
+                        </div>
+                        <div
+                            class="flex-1 flex flex-col justify-between px-6 pt-6 pb-8 bg-gray-50 space-y-6 sm:p-10 sm:pt-6">
+                            <ul class="space-y-4">
+                                <li class="flex items-start">
+                                    <div class="flex-shrink-0">
+                                        <!-- Heroicon name: check -->
+                                        <svg class="h-6 w-6 text-primary" xmlns="http://www.w3.org/2000/svg" fill="none"
+                                            viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M5 13l4 4L19 7" />
+                                        </svg>
+                                    </div>
+                                    <p class="ml-3 text-base text-gray-700">
+                                        Clean overview
+                                    </p>
+                                </li>
 
-                                    <li class="flex items-start">
-                                        <div class="flex-shrink-0">
-                                            <!-- Heroicon name: check -->
-                                            <svg class="h-6 w-6 text-primary" xmlns="http://www.w3.org/2000/svg"
-                                                fill="none" viewBox="0 0 24 24" stroke="currentColor"
-                                                aria-hidden="true">
-                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                    d="M5 13l4 4L19 7" />
-                                            </svg>
-                                        </div>
-                                        <p class="ml-3 text-base text-gray-700">
-                                            Automatic assignment to assistants
-                                        </p>
-                                    </li>
+                                <li class="flex items-start">
+                                    <div class="flex-shrink-0">
+                                        <!-- Heroicon name: check -->
+                                        <svg class="h-6 w-6 text-primary" xmlns="http://www.w3.org/2000/svg" fill="none"
+                                            viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M5 13l4 4L19 7" />
+                                        </svg>
+                                    </div>
+                                    <p class="ml-3 text-base text-gray-700">
+                                        Automatic assignment to assistants
+                                    </p>
+                                </li>
 
-                                    <li class="flex items-start">
-                                        <div class="flex-shrink-0">
-                                            <!-- Heroicon name: check -->
-                                            <svg class="h-6 w-6 text-primary" xmlns="http://www.w3.org/2000/svg"
-                                                fill="none" viewBox="0 0 24 24" stroke="currentColor"
-                                                aria-hidden="true">
-                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                    d="M5 13l4 4L19 7" />
-                                            </svg>
-                                        </div>
-                                        <p class="ml-3 text-base text-gray-700">
-                                            Labels for insight in all the questions
-                                        </p>
-                                    </li>
+                                <li class="flex items-start">
+                                    <div class="flex-shrink-0">
+                                        <!-- Heroicon name: check -->
+                                        <svg class="h-6 w-6 text-primary" xmlns="http://www.w3.org/2000/svg" fill="none"
+                                            viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M5 13l4 4L19 7" />
+                                        </svg>
+                                    </div>
+                                    <p class="ml-3 text-base text-gray-700">
+                                        Labels for insight in all the questions
+                                    </p>
+                                </li>
 
-                                    <li class="flex items-start">
-                                        <div class="flex-shrink-0">
-                                            <!-- Heroicon name: check -->
-                                            <svg class="h-6 w-6 text-primary" xmlns="http://www.w3.org/2000/svg"
-                                                fill="none" viewBox="0 0 24 24" stroke="currentColor"
-                                                aria-hidden="true">
-                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                    d="M5 13l4 4L19 7" />
-                                            </svg>
-                                        </div>
-                                        <p class="ml-3 text-base text-gray-700">
-                                            Statistics to focus on the most asked questions
-                                        </p>
-                                    </li>
-                                </ul>
-                                <div class="rounded-md shadow">
-                                    <a href="#"
-                                        class="flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-gray-800 hover:bg-gray-900"
-                                        aria-describedby="tier-standard">
-                                        Read more
-                                    </a>
-                                </div>
+                                <li class="flex items-start">
+                                    <div class="flex-shrink-0">
+                                        <!-- Heroicon name: check -->
+                                        <svg class="h-6 w-6 text-primary" xmlns="http://www.w3.org/2000/svg" fill="none"
+                                            viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M5 13l4 4L19 7" />
+                                        </svg>
+                                    </div>
+                                    <p class="ml-3 text-base text-gray-700">
+                                        Statistics to focus on the most asked questions
+                                    </p>
+                                </li>
+                            </ul>
+                            <div class="rounded-md shadow">
+                                <a href="/teachers"
+                                    class="flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-gray-800 hover:bg-gray-900"
+                                    aria-describedby="tier-standard">
+                                    Read more
+                                </a>
                             </div>
                         </div>
+                    </div>
 
-                        <div class="flex flex-col rounded-lg shadow-lg overflow-hidden">
-                            <div class="px-6 py-8 bg-white sm:p-10 sm:pb-6">
-                                <div class="mt-4 flex items-baseline text-6xl font-extrabold">
-                                    Students
-                                </div>
-                                <p class="mt-5 text-lg text-gray-500">
-                                    From simple to complicated questions, you want to ask them easily and get the
-                                    answer.
-                                </p>
+                    <div class="flex flex-col rounded-lg shadow-lg overflow-hidden">
+                        <div class="px-6 py-8 bg-white sm:p-10 sm:pb-6">
+                            <div class="mt-4 flex items-baseline text-6xl font-extrabold">
+                                Students
                             </div>
-                            <div
-                                class="flex-1 flex flex-col justify-between px-6 pt-6 pb-8 bg-gray-50 space-y-6 sm:p-10 sm:pt-6">
-                                <ul class="space-y-4">
-                                    <li class="flex items-start">
-                                        <div class="flex-shrink-0">
-                                            <!-- Heroicon name: check -->
-                                            <svg class="h-6 w-6 text-primary" xmlns="http://www.w3.org/2000/svg"
-                                                fill="none" viewBox="0 0 24 24" stroke="currentColor"
-                                                aria-hidden="true">
-                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                    d="M5 13l4 4L19 7" />
-                                            </svg>
-                                        </div>
-                                        <p class="ml-3 text-base text-gray-700">
-                                            Integration with the LMS
-                                        </p>
-                                    </li>
+                            <p class="mt-5 text-lg text-gray-500">
+                                From simple to complicated questions, you want to ask them easily and get the
+                                answer.
+                            </p>
+                        </div>
+                        <div
+                            class="flex-1 flex flex-col justify-between px-6 pt-6 pb-8 bg-gray-50 space-y-6 sm:p-10 sm:pt-6">
+                            <ul class="space-y-4">
+                                <li class="flex items-start">
+                                    <div class="flex-shrink-0">
+                                        <!-- Heroicon name: check -->
+                                        <svg class="h-6 w-6 text-primary" xmlns="http://www.w3.org/2000/svg" fill="none"
+                                            viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M5 13l4 4L19 7" />
+                                        </svg>
+                                    </div>
+                                    <p class="ml-3 text-base text-gray-700">
+                                        Integration with the LMS
+                                    </p>
+                                </li>
 
-                                    <li class="flex items-start">
-                                        <div class="flex-shrink-0">
-                                            <!-- Heroicon name: check -->
-                                            <svg class="h-6 w-6 text-primary" xmlns="http://www.w3.org/2000/svg"
-                                                fill="none" viewBox="0 0 24 24" stroke="currentColor"
-                                                aria-hidden="true">
-                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                    d="M5 13l4 4L19 7" />
-                                            </svg>
-                                        </div>
-                                        <p class="ml-3 text-base text-gray-700">
-                                            Support for markdown
-                                        </p>
-                                    </li>
+                                <li class="flex items-start">
+                                    <div class="flex-shrink-0">
+                                        <!-- Heroicon name: check -->
+                                        <svg class="h-6 w-6 text-primary" xmlns="http://www.w3.org/2000/svg" fill="none"
+                                            viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M5 13l4 4L19 7" />
+                                        </svg>
+                                    </div>
+                                    <p class="ml-3 text-base text-gray-700">
+                                        Support for markdown
+                                    </p>
+                                </li>
 
-                                    <li class="flex items-start">
-                                        <div class="flex-shrink-0">
-                                            <!-- Heroicon name: check -->
-                                            <svg class="h-6 w-6 text-primary" xmlns="http://www.w3.org/2000/svg"
-                                                fill="none" viewBox="0 0 24 24" stroke="currentColor"
-                                                aria-hidden="true">
-                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                    d="M5 13l4 4L19 7" />
-                                            </svg>
-                                        </div>
-                                        <p class="ml-3 text-base text-gray-700">
-                                            Upload images and files with your question
-                                        </p>
-                                    </li>
+                                <li class="flex items-start">
+                                    <div class="flex-shrink-0">
+                                        <!-- Heroicon name: check -->
+                                        <svg class="h-6 w-6 text-primary" xmlns="http://www.w3.org/2000/svg" fill="none"
+                                            viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M5 13l4 4L19 7" />
+                                        </svg>
+                                    </div>
+                                    <p class="ml-3 text-base text-gray-700">
+                                        Upload images and files with your question
+                                    </p>
+                                </li>
 
-                                    <li class="flex items-start">
-                                        <div class="flex-shrink-0">
-                                            <!-- Heroicon name: check -->
-                                            <svg class="h-6 w-6 text-primary" xmlns="http://www.w3.org/2000/svg"
-                                                fill="none" viewBox="0 0 24 24" stroke="currentColor"
-                                                aria-hidden="true">
-                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                    d="M5 13l4 4L19 7" />
-                                            </svg>
-                                        </div>
-                                        <p class="ml-3 text-base text-gray-700">
-                                            Have a conversation about the question
-                                        </p>
-                                    </li>
-                                </ul>
-                                <div class="rounded-md shadow">
-                                    <a href="#"
-                                        class="flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-gray-800 hover:bg-gray-900"
-                                        aria-describedby="tier-standard">
-                                        Read more
-                                    </a>
-                                </div>
+                                <li class="flex items-start">
+                                    <div class="flex-shrink-0">
+                                        <!-- Heroicon name: check -->
+                                        <svg class="h-6 w-6 text-primary" xmlns="http://www.w3.org/2000/svg" fill="none"
+                                            viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M5 13l4 4L19 7" />
+                                        </svg>
+                                    </div>
+                                    <p class="ml-3 text-base text-gray-700">
+                                        Have a conversation about the question
+                                    </p>
+                                </li>
+                            </ul>
+                            <div class="rounded-md shadow">
+                                <a href="/students"
+                                    class="flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-gray-800 hover:bg-gray-900"
+                                    aria-describedby="tier-standard">
+                                    Read more
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -392,8 +248,8 @@ layout: default
             <rect width="784" height="404" fill="url(#e56e3f81-d9c1-4b83-a3ba-0d0ac8c32f32)" />
         </svg>
 
-        <svg class="hidden lg:block absolute right-full top-1/2 transform translate-x-1/2 -translate-y-1/2" width="404"
-            height="784" fill="none" viewBox="0 0 404 784" aria-hidden="true">
+        <svg class="hidden lg:block absolute right-full top-1/2 transform translate-x-1/2 -translate-y-1/2"
+            width="404" height="784" fill="none" viewBox="0 0 404 784" aria-hidden="true">
             <defs>
                 <pattern id="56409614-3d62-4985-9a10-7ca758a8f4f0" x="0" y="0" width="20" height="20"
                     patternUnits="userSpaceOnUse">
@@ -419,7 +275,11 @@ layout: default
                 <blockquote class="relative">
                     <div class="text-2xl leading-9 font-medium text-gray-900">
                         <p>
-                            TicketVise has been a pleasant low-threshold replacement for the mailinglist. As a TA TicketVise allows us to conveniently organise and keep track of a large number of tickets, which enabled us to provide quick and good interaction with students -- even during the lack of personal interaction due to COVID-19. Both the course organisation and the students are happy we used TicketVise in our course!
+                            TicketVise has been a pleasant low-threshold replacement for the mailinglist. As a TA
+                            TicketVise allows us to conveniently organise and keep track of a large number of
+                            tickets, which enabled us to provide quick and good interaction with students -- even
+                            during the lack of personal interaction due to COVID-19. Both the course organisation
+                            and the students are happy we used TicketVise in our course!
                         </p>
                     </div>
                     <footer class="mt-8">
@@ -431,7 +291,8 @@ layout: default
                             </div>
                             <div class="ml-4 lg:ml-0">
                                 <div class="text-base font-medium text-gray-900">Johannes Blaser BSc</div>
-                                <div class="text-base font-medium text-primary">Computer Science, University of Amsterdam</div>
+                                <div class="text-base font-medium text-primary">Computer Science, University of
+                                    Amsterdam</div>
                             </div>
                         </div>
                     </footer>

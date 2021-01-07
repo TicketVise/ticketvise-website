@@ -14,7 +14,9 @@
   "author": "TicketVise",
   "homepage": "https://ticketvise.com",
   "dependencies": {
-    "autoprefixer": "^10.1.0",
+    "@tailwindcss/aspect-ratio": "^0.2.0",
+    "@tailwindcss/typography": "^0.3.1",
+    "autoprefixer": "^10.2.0",
     "gulp": "^4.0.2",
     "gulp-concat": "^2.6.1",
     "gulp-concat-css": "^3.1.0",
@@ -22,7 +24,8 @@
     "gulp-postcss": "^9.0.0",
     "gulp-purgecss": "^2.3.0",
     "hugo": "0.0.3",
-    "postcss": "^8.2.1",
+    "lodash": "^4.17.20",
+    "postcss": "^8.2.3",
     "tailwindcss": "^2.0.2"
   },
   "devDependencies": {}

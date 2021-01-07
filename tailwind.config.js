@@ -7,7 +7,9 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primary: colors.orange[600]
+        primary: colors.orange[600],
+        rose: colors.rose,
+        orange: colors.orange
       }
     }
   },
@@ -15,5 +17,8 @@ module.exports = {
     extend: {}
   },
   corePlugins: {},
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/aspect-ratio'),
+    require('@tailwindcss/typography')
+  ],
 }
