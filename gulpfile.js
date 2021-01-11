@@ -14,7 +14,8 @@ gulp.task('dev-css', function () {
       .pipe(concatCss('page.css'))
       .pipe(cssnano({
         reduceIdents: false,
-        discardComments: {removeAll: true}
+        discardComments: {removeAll: true},
+        svgo: false
       }))
       .pipe(gulp.dest('./static/css/'))
 });
@@ -34,7 +35,8 @@ gulp.task('build-css', function () {
       .pipe(concatCss('page.css'))
       .pipe(cssnano({
         reduceIdents: false,
-        discardComments: {removeAll: true}
+        discardComments: {removeAll: true},
+        svgo: false
       }))
       .pipe(gulp.dest('./static/css/'))
 });

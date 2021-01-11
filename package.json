@@ -15,6 +15,7 @@
   "homepage": "https://ticketvise.com",
   "dependencies": {
     "@tailwindcss/aspect-ratio": "^0.2.0",
+    "@tailwindcss/forms": "^0.2.1",
     "@tailwindcss/typography": "^0.3.1",
     "autoprefixer": "^10.2.0",
     "gulp": "^4.0.2",

@@ -19,6 +19,7 @@ module.exports = {
   corePlugins: {},
   plugins: [
     require('@tailwindcss/aspect-ratio'),
+    require('@tailwindcss/forms'),
     require('@tailwindcss/typography')
   ],
 }
