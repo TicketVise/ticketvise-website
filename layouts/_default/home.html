@@ -35,7 +35,8 @@
                     <span class="block text-primary">answering questions</span>
                 </h1>
                 <p class="mt-3 max-w-md mx-auto text-base text-gray-500 sm:text-lg md:mt-5 md:text-xl md:max-w-3xl">
-                    Students have questions that need answers. We want to help you streamline that process so you can focus on the teaching part.
+                    Students have questions that need answers. We want to help you streamline that process so you can
+                    focus on the teaching part.
                 </p>
             </div>
         </div>
@@ -46,7 +47,467 @@
                 <div class="flex-1 w-full bg-gray-800"></div>
             </div>
             <div class="max-w-7xl mx-auto px-4 sm:px-6">
-                <img class="relative rounded-lg shadow-lg" src="/img/inbox_overview_page.png" alt="App screenshot">
+                <div class="relative rounded-lg shadow-lg z-10 bg-white">
+                    <div class="flex flex-col">
+                        <nav class="bg-gray-800 sticky top-0 z-20 rounded-t-lg">
+                            <div class="px-4">
+                                <div class="flex items-center justify-between h-16">
+                                    <div class="flex items-center">
+                                        <div class="flex-shrink-0">
+                                            <a class="flex items-center router-link-active">
+                                                <img src="/img/logo.svg" alt="Logo" class="h-8 w-8">
+                                                <span class="text-2xl ml-2 text-white">Ticket</span>
+                                                <span class="text-2xl text-primary font-bold">Vise</span>
+                                            </a>
+                                        </div>
+                                        <div class="hidden md:block">
+                                            <div class="ml-10 flex items-baseline space-x-4">
+                                                <a
+                                                    class="px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-gray-700 focus:outline-none focus:text-white focus:bg-gray-700 bg-gray-900">Inboxes</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="hidden md:block">
+                                            <div class="ml-4 flex items-center md:ml-6">
+                                                <div class="relative flex">
+                                                    <button type="button" aria-label="Fullscreen"
+                                                        class="relative cursor-pointer px-2 py-1 border-2 border-transparent text-gray-400 rounded-full hover:text-white focus:outline-none focus:text-white focus:bg-gray-700"
+                                                        style="display: none;">
+                                                        <i aria-hidden="true" class="fa fa-arrows-alt text-lg"></i>
+                                                    </button>
+                                                    <div>
+                                                        <button aria-label="Support" aria-haspopup="true" class="relative cursor-pointer px-2 py-1 border-2 border-transparent text-gray-400 rounded-full hover:text-white focus:outline-none focus:text-white focus:bg-gray-700">
+                                                            <i aria-hidden="true" class="fa fa-question-circle text-xl"></i>
+                                                        </button>
+                                                        <div class="origin-top-right absolute right-0 mt-2 w-48 rounded-md shadow-lg" style="display: none;">
+                                                            <div role="menu" aria-orientation="vertical" aria-labelledby="user-menu" class="py-1 rounded-md bg-white shadow-xs">
+                                                                <a target="_blank" role="menuitem" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Getting started</a>
+                                                                <a target="_blank" rel="noopener noreferrer" role="menuitem" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Send feedback</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <a class="relative cursor-pointer p-1 border-2 border-transparent text-gray-400 rounded-full hover:text-white focus:outline-none focus:text-white focus:bg-gray-700" aria-label="Notifications">
+                                                    <svg stroke="currentColor" fill="none" viewBox="0 0 24 24" class="h-6 w-6">
+                                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"></path>
+                                                    </svg>
+                                                </a>
+                                                <div class="ml-3 relative">
+                                                    <div>
+                                                        <button id="user-menu" aria-label="User menu" aria-haspopup="true" class="max-w-xs flex items-center text-sm rounded-full text-white focus:outline-none focus:shadow-solid">
+                                                            <img src="/img/profile.jpg" alt="User profile" class="h-8 w-8 rounded-full">
+                                                        </button>
+                                                    </div>
+                                                    <div class="origin-top-right absolute right-0 mt-2 w-48 rounded-md shadow-lg" style="display: none;">
+                                                        <div role="menu" aria-orientation="vertical" aria-labelledby="user-menu" class="py-1 rounded-md bg-white shadow-xs">
+                                                            <a class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem">Account</a>
+                                                            <a role="menuitem" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Sign out
+                                                            </a></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="flex items-center md:hidden"><button class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white
+                     hover:bg-gray-700 focus:outline-none focus:bg-gray-700 focus:text-white transition duration-150
+                     ease-in-out"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="block h-6 w-6">
+                                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                                        stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                                                </svg> <svg fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                                                    class="hidden h-6 w-6">
+                                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                                        stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                                                </svg></button></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div style="display: none;">
+                                <div class="px-2 pt-2 pb-3 sm:px-3 space-y-1"><a class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-700
+                  focus:outline-none focus:text-white focus:bg-gray-700 bg-gray-900">Inboxes
+                                    </a> <a href="#/notifications" class="flex flex-row items-center px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white
+                  hover:bg-gray-700 focus:outline-none focus:text-white focus:bg-gray-700">
+                                        Notifications
+                                    </a>
+                                    <!---->
+                                </div>
+                                <div class="pt-4 pb-3 border-t border-gray-700">
+                                    <div class="flex items-center px-5">
+                                        <div class="flex-shrink-0"><img src="/img/profile.jpg" alt="Profile image"
+                                                class="h-10 w-10 rounded-full"></div>
+                                        <div class="ml-3">
+                                            <div class="text-base font-medium leading-none text-white"></div>
+                                            <div class="mt-1 text-sm font-medium leading-none text-gray-400">
+                                                g.maker@ticketvise.com</div>
+                                        </div>
+                                    </div>
+                                    <div class="mt-3 px-2 space=y-1"><a class="block px-3 py-2 rounded-md text-base font-medium text-gray-400 hover:text-white hover:bg-gray-700
+                    focus:outline-none focus:text-white focus:bg-gray-700">Your
+                                            Account
+                                        </a> <a class="block px-3 py-2 rounded-md text-base font-medium text-gray-400 hover:text-white hover:bg-gray-700
+                    focus:outline-none focus:text-white focus:bg-gray-700">Sign
+                                            out
+                                        </a></div>
+                                </div>
+                            </div>
+                        </nav>
+                        <div class="h-full overflow-y-auto">
+                            <div class="items-stretch overflow-y-hidden">
+                                <div class="flex flex-row flex-grow h-full max-w-full pt-16 -mt-16">
+                                    <div class="min-w-side max-w-side border-r hidden lg:flex flex-col flex-grow">
+                                        <div class="flex items-center px-4 py-4">
+                                            <div class="flex-shrink-0"><img src="/img/profile.jpg" alt="Account image"
+                                                    class="h-10 w-10 rounded-full"></div>
+                                            <div class="ml-3">
+                                                <div class="text-base font-bold leading-none text-gray-900">Gerco
+                                                    Mandemaker</div>
+                                                <div class="mt-1 text-sm leading-none text-gray-600">
+                                                    g.maker@ticketvise.com</div>
+                                            </div>
+                                        </div>
+                                        <div class="p-4"><a
+                                                class="cursor-pointer inline-flex w-full justify-center items-center px-4 py-2 border border-transparent text-sm leading-5 font-medium rounded-md text-white bg-primary hover:bg-orange-500 focus:outline-none focus:shadow-outline-orange focus:border-orange-700 active:bg-orange-700 transition duration-150 ease-in-out"><i
+                                                    class="fa fa-plus mr-2"></i> <span>New Ticket</span></a></div>
+                                        <div class="flex flex-col space-y-1 px-4"><a aria-current="page"
+                                                class="cursor-pointer grid grid-cols-12 px-3 py-2 rounded items-center space-x-2 text-gray-700 hover:bg-gray-100 hover:text-gray-900 router-link-exact-active router-link-active"><i
+                                                    class="fa fa-home col-span-1 flex justify-center"></i> <span
+                                                    class="col-span-11">Overview</span></a> <a
+                                                class="cursor-pointer grid grid-cols-12 px-3 py-2 rounded items-center space-x-2 text-gray-700 hover:bg-gray-100 hover:text-gray-900"><i
+                                                    class="fa fa-users col-span-1 flex justify-center"></i> <span
+                                                    class="col-span-11">Users</span></a> <a
+                                                class="cursor-pointer grid grid-cols-12 px-3 py-2 rounded items-center space-x-2 text-gray-700 hover:bg-gray-100 hover:text-gray-900"><i
+                                                    class="fa fa-tags col-span-1 flex justify-center"></i> <span
+                                                    class="col-span-11">Labels</span></a> <a
+                                                class="cursor-pointer grid grid-cols-12 px-3 py-2 rounded items-center space-x-2 text-gray-700 hover:bg-gray-100 hover:text-gray-900"><svg
+                                                    focusable="false" data-prefix="fas" data-icon="chart-line"
+                                                    role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"
+                                                    class="svg-inline--fa fa-chart-line fa-w-16">
+                                                    <path fill="currentColor"
+                                                        d="M496 384H64V80c0-8.84-7.16-16-16-16H16C7.16 64 0 71.16 0 80v336c0 17.67 14.33 32 32 32h464c8.84 0 16-7.16 16-16v-32c0-8.84-7.16-16-16-16zM464 96H345.94c-21.38 0-32.09 25.85-16.97 40.97l32.4 32.4L288 242.75l-73.37-73.37c-12.5-12.5-32.76-12.5-45.25 0l-68.69 68.69c-6.25 6.25-6.25 16.38 0 22.63l22.62 22.62c6.25 6.25 16.38 6.25 22.63 0L192 237.25l73.37 73.37c12.5 12.5 32.76 12.5 45.25 0l96-96 32.4 32.4c15.12 15.12 40.97 4.41 40.97-16.97V112c.01-8.84-7.15-16-15.99-16z">
+                                                    </path>
+                                                </svg> <span class="col-span-11">Statistics</span></a> <a
+                                                class="cursor-pointer grid grid-cols-12 px-3 py-2 rounded items-center space-x-2 text-gray-700 hover:bg-gray-100 hover:text-gray-900"><i
+                                                    class="fa fa-cog col-span-1 flex justify-center"></i> <span
+                                                    class="col-span-11">Settings</span></a></div>
+                                    </div>
+                                    <!---->
+                                    <div id="scrollable-content"
+                                        class="flex flex-col w-full overflow-x-hidden overflow-y-auto">
+                                        <header class="bg-white border-b">
+                                            <div class="relative p-4 pt-2">
+                                                <div class="lg:flex lg:items-center lg:justify-between">
+                                                    <div class="flex-1 min-w-0">
+                                                        <div class="flex justify-between items-center"><a
+                                                                class="text-xs text-gray-700 hover:underline cursor-pointer router-link-active"><i
+                                                                    class="fa fa-arrow-left mr-2"></i>
+                                                                Dashboard
+                                                            </a></div> <button aria-label="Main menu"
+                                                            aria-expanded="false"
+                                                            class="absolute top-0 right-2 inline-flex lg:hidden items-center justify-center p-2 m-1 rounded-md text-gray-600 hover:text-white hover:bg-gray-700 focus:outline-none focus:bg-gray-700 focus:text-white transition duration-150 ease-in-out"><i
+                                                                class="fa fa-bars"></i></button>
+                                                        <h2
+                                                            class="text-2xl font-bold leading-7 text-gray-900 sm:text-3xl sm:leading-9 truncate">
+                                                            Datastructuren
+                                                        </h2>
+                                                        <div class="flex flex-row flex-wrap space-x-4 sm:space-x-6">
+                                                            <div
+                                                                class="mt-2 flex items-center text-sm leading-5 text-gray-500">
+                                                                <i class="fa fa-code mr-1"></i>
+                                                                2021DS1864
+                                                            </div>
+                                                            <div
+                                                                class="mt-2 flex items-center text-sm leading-5 text-gray-500">
+                                                                <i class="fa fa-user mr-1"></i>
+                                                                Gerco Mandemaker
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </header>
+                                        <section class="flex flex-col h-full flex-grow justify-start">
+                                            <div
+                                                class="flex flex-col md:grid md:grid-cols-5 md:gap-2 p-4 space-y-2 md:space-y-0">
+                                                <div class="flex space-x-2 md:col-span-2 xl:col-span-3 items-center">
+                                                    <div
+                                                        class="flex border border-gray-300 rounded-md overflow-hidden flex-grow px-2">
+                                                        <input placeholder="Search" type="text"
+                                                            class="flex-grow w-full p-2 mx-1 focus:outline-none border-none">
+                                                        <button
+                                                            class="bg-white w-auto flex justify-end items-center text-gray-600 p-2 hover:text-gray-500"><i
+                                                                class="fa fa-search"></i></button>
+                                                    </div> <button title="Show List View"
+                                                        class="md:hidden border rounded h-10 px-3 focus:outline-none hover:bg-gray-100"><svg
+                                                            aria-hidden="true" focusable="false" data-prefix="fas"
+                                                            data-icon="list" role="img"
+                                                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"
+                                                            class="svg-inline--fa fa-list fa-w-16">
+                                                            <path fill="currentColor"
+                                                                d="M80 368H16a16 16 0 0 0-16 16v64a16 16 0 0 0 16 16h64a16 16 0 0 0 16-16v-64a16 16 0 0 0-16-16zm0-320H16A16 16 0 0 0 0 64v64a16 16 0 0 0 16 16h64a16 16 0 0 0 16-16V64a16 16 0 0 0-16-16zm0 160H16a16 16 0 0 0-16 16v64a16 16 0 0 0 16 16h64a16 16 0 0 0 16-16v-64a16 16 0 0 0-16-16zm416 176H176a16 16 0 0 0-16 16v32a16 16 0 0 0 16 16h320a16 16 0 0 0 16-16v-32a16 16 0 0 0-16-16zm0-320H176a16 16 0 0 0-16 16v32a16 16 0 0 0 16 16h320a16 16 0 0 0 16-16V80a16 16 0 0 0-16-16zm0 160H176a16 16 0 0 0-16 16v32a16 16 0 0 0 16 16h320a16 16 0 0 0 16-16v-32a16 16 0 0 0-16-16z"
+                                                                class=""></path>
+                                                        </svg></button>
+                                                </div>
+                                                <div class="flex space-x-2 md:col-span-3 xl:col-span-2 items-center">
+                                                    <div class="flex-grow">
+                                                        <div class="space-y-1" value="">
+                                                            <div class="relative"><span
+                                                                    class="inline-block w-full rounded-md"><button
+                                                                        aria-expanded="true" aria-haspopup="listbox"
+                                                                        aria-labelledby="listbox-label" tabindex="-1"
+                                                                        type="button"
+                                                                        class="cursor-pointer relative w-full rounded-md border border-gray-300 bg-white pl-3 pr-10 py-2 text-left focus:outline-none transition ease-in-out duration-150">
+                                                                        <div class="flex items-center space-x-3"><span
+                                                                                class="block truncate">Select
+                                                                                labels</span></div> <span
+                                                                            class="absolute inset-y-0 right-0 flex items-center pr-2 pointer-events-none"><svg
+                                                                                viewBox="0 0 20 20" fill="none"
+                                                                                stroke="currentColor"
+                                                                                class="h-5 w-5 text-gray-400">
+                                                                                <path d="M7 7l3-3 3 3m0 6l-3 3-3-3"
+                                                                                    stroke-linecap="round"
+                                                                                    stroke-linejoin="round"
+                                                                                    stroke-width="1.5"></path>
+                                                                            </svg></span>
+                                                                    </button></span>
+                                                                <!---->
+                                                            </div>
+                                                        </div>
+                                                    </div> <button
+                                                        class="inline-flex items-center px-4 py-2 border border-gray-300 text-sm leading-5 font-medium rounded-md focus:outline-none transition duration-150 ease-in-out md:m-0 h-10 bg-gray-100 text-black">
+                                                        <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 12H4"></path></svg>
+                                                        My Tickets
+                                                    </button> <button title="Show List View"
+                                                        class="hidden md:block border rounded h-10 px-3 focus:outline-none hover:bg-gray-100">
+                                                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 10h16M4 14h16M4 18h16"></path></svg>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                            <div
+                                                class="max-w-full flex md:space-x-4 flex-grow overflow-x-auto px-4 mb-4 space-x-2">
+                                                <div id="Assigned"
+                                                    class="flex flex-col flex-1 border rounded border-gray-700 border-opacity-50 border-t-0 bg-gray-100 ticket-column min-w-3/4 sm:min-w-1/2 md:min-w-0">
+                                                    <div class="py-1 text-center border-t-2 bg-white rounded-tl rounded-tr"
+                                                        style="border-color: rgb(233, 196, 106);">
+                                                        <p>Assigned (<strong>1</strong>)</p>
+                                                    </div>
+                                                    <div
+                                                        class="flex-grow border-t border-gray-700 border-opacity-50 overflow-y-auto">
+                                                        <div id="Assigned-tickets" class="p-2 space-y-2">
+                                                            <div
+                                                                class="rounded overflow-hidden bg-white p-2 shadow-none border border-gray-300">
+                                                                <span class="text-xs text-gray-500 float-right">
+                                                                    #4
+                                                                </span>
+                                                                <h3 class="text-xs text-gray-500">10/07/2020 at 00:41</h3>
+                                                                <h3 class="text-xs text-gray-500">
+                                                                    Assignee: Tonia Bijker
+                                                                </h3>
+                                                                <a class="cursor-pointer font-medium text-gray-900 hover:underline">
+                                                                    What happens if multiple objects get the same hash?
+                                                                </a>
+                                                                <div class="space-x-1 select-none"><span
+                                                                        class="inline-block border rounded-full px-2 py-1 text-xs font-semibold text-gray-700"
+                                                                        style="line-height: 1 !important;">
+                                                                        <div class="flex flex-row items-center">
+                                                                            <div class="w-2 h-2 rounded-full flex-col mr-1"
+                                                                                style="background-color: rgb(255, 90, 31);">
+                                                                            </div>
+                                                                            Hash Table
+                                                                        </div>
+                                                                    </span></div>
+                                                            </div>
+                                                            <div class="flex justify-center">
+                                                                <!---->
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div id="Awaiting response"
+                                                    class="flex flex-col flex-1 border rounded border-gray-700 border-opacity-50 border-t-0 bg-gray-100 ticket-column min-w-3/4 sm:min-w-1/2 md:min-w-0">
+                                                    <div class="py-1 text-center border-t-2 bg-white rounded-tl rounded-tr"
+                                                        style="border-color: rgb(42, 157, 143);">
+                                                        <p>Awaiting response (<strong>5</strong>)</p>
+                                                    </div>
+                                                    <div
+                                                        class="flex-grow border-t border-gray-700 border-opacity-50 overflow-y-auto">
+                                                        <div id="Awaiting response-tickets" class="p-2 space-y-2">
+                                                            <div
+                                                                class="rounded overflow-hidden bg-white p-2 shadow-none border border-gray-300">
+                                                                <span class="text-xs text-gray-500 float-right">
+                                                                    #2
+                                                                </span>
+                                                                <h3 class="text-xs text-gray-500">10/08/2020 at 18:41
+                                                                </h3>
+                                                                <h3 class="text-xs text-gray-500">
+                                                                    Assignee: Anis van der Werf
+                                                                </h3> <a
+                                                                    class="cursor-pointer font-medium text-gray-900 hover:underline">
+                                                                    What's the difference between a hash table and a
+                                                                    linked list?
+                                                                </a>
+                                                                <div class="space-x-1 select-none"><span
+                                                                        class="inline-block border rounded-full px-2 py-1 text-xs font-semibold text-gray-700"
+                                                                        style="line-height: 1 !important;">
+                                                                        <div class="flex flex-row items-center">
+                                                                            <div class="w-2 h-2 rounded-full flex-col mr-1"
+                                                                                style="background-color: rgb(14, 159, 110);">
+                                                                            </div>
+                                                                            Linked List
+                                                                        </div>
+                                                                    </span><span
+                                                                        class="inline-block border rounded-full px-2 py-1 text-xs font-semibold text-gray-700"
+                                                                        style="line-height: 1 !important;">
+                                                                        <div class="flex flex-row items-center">
+                                                                            <div class="w-2 h-2 rounded-full flex-col mr-1"
+                                                                                style="background-color: rgb(255, 90, 31);">
+                                                                            </div>
+                                                                            Hash Table
+                                                                        </div>
+                                                                    </span></div>
+                                                            </div>
+                                                            <div
+                                                                class="rounded overflow-hidden bg-white p-2 shadow-none border border-gray-300">
+                                                                <span class="text-xs text-gray-500 float-right">
+                                                                    #1
+                                                                </span>
+                                                                <h3 class="text-xs text-gray-500">10/08/2020 at 18:41
+                                                                </h3>
+                                                                <h3 class="text-xs text-gray-500">
+                                                                    Assignee: Ranil Kempen
+                                                                </h3> <a
+                                                                    class="cursor-pointer font-medium text-gray-900 hover:underline">
+                                                                    Do we need to make a singly linked list or a doubly
+                                                                    linked list?
+                                                                </a>
+                                                                <div class="space-x-1 select-none"><span
+                                                                        class="inline-block border rounded-full px-2 py-1 text-xs font-semibold text-gray-700"
+                                                                        style="line-height: 1 !important;">
+                                                                        <div class="flex flex-row items-center">
+                                                                            <div class="w-2 h-2 rounded-full flex-col mr-1"
+                                                                                style="background-color: rgb(14, 159, 110);">
+                                                                            </div>
+                                                                            Linked List
+                                                                        </div>
+                                                                    </span></div>
+                                                            </div>
+                                                            <div
+                                                                class="rounded overflow-hidden bg-white p-2 shadow-none border border-gray-300">
+                                                                <span class="text-xs text-gray-500 float-right">
+                                                                    #3
+                                                                </span>
+                                                                <h3 class="text-xs text-gray-500">10/07/2020 at 19:41
+                                                                </h3>
+                                                                <h3 class="text-xs text-gray-500">
+                                                                    Assignee: Ranil Kempen
+                                                                </h3> <a
+                                                                    class="cursor-pointer font-medium text-gray-900 hover:underline">
+                                                                    My laptop broke.
+                                                                </a>
+                                                                <div class="space-x-1 select-none"><span
+                                                                        class="inline-block border rounded-full px-2 py-1 text-xs font-semibold text-gray-700"
+                                                                        style="line-height: 1 !important;">
+                                                                        <div class="flex flex-row items-center">
+                                                                            <div class="w-2 h-2 rounded-full flex-col mr-1"
+                                                                                style="background-color: rgb(255, 90, 31);">
+                                                                            </div>
+                                                                            Hash Table
+                                                                        </div>
+                                                                    </span></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div id="Closed"
+                                                    class="flex flex-col flex-1 border rounded border-gray-700 border-opacity-50 border-t-0 bg-gray-100 ticket-column min-w-3/4 sm:min-w-1/2 md:min-w-0">
+                                                    <div class="py-1 text-center border-t-2 bg-white rounded-tl rounded-tr"
+                                                        style="border-color: rgb(38, 70, 83);">
+                                                        <p>Closed</p>
+                                                    </div>
+                                                    <div
+                                                        class="flex-grow border-t border-gray-700 border-opacity-50 overflow-y-auto">
+                                                        <div id="Closed-tickets" class="p-2 space-y-2">
+                                                            <div
+                                                                class="rounded overflow-hidden bg-white p-2 shadow-none border border-gray-300">
+                                                                <span class="text-xs text-gray-500 float-right">
+                                                                    #7
+                                                                </span>
+                                                                <h3 class="text-xs text-gray-500">10/06/2020 at 05:41
+                                                                </h3>
+                                                                <h3 class="text-xs text-gray-500">
+                                                                    Assignee: Thom Westerkamp
+                                                                </h3> <a
+                                                                    class="cursor-pointer font-medium text-gray-900 hover:underline">
+                                                                    Do we have to use the framework?
+                                                                </a>
+                                                                <div class="space-x-1 select-none"></div>
+                                                            </div>
+                                                            <div
+                                                                class="rounded overflow-hidden bg-white p-2 shadow-none border border-gray-300">
+                                                                <span class="text-xs text-gray-500 float-right">
+                                                                    #9
+                                                                </span>
+                                                                <h3 class="text-xs text-gray-500">10/06/2020 at 02:41
+                                                                </h3>
+                                                                <h3 class="text-xs text-gray-500">
+                                                                    Assignee: Anis van der Werf
+                                                                </h3> <a
+                                                                    class="cursor-pointer font-medium text-gray-900 hover:underline">
+                                                                    Do we need to balance a heap?
+                                                                </a>
+                                                                <div class="space-x-1 select-none"><span
+                                                                        class="inline-block border rounded-full px-2 py-1 text-xs font-semibold text-gray-700"
+                                                                        style="line-height: 1 !important;">
+                                                                        <div class="flex flex-row items-center">
+                                                                            <div class="w-2 h-2 rounded-full flex-col mr-1"
+                                                                                style="background-color: rgb(240, 78, 205);">
+                                                                            </div>
+                                                                            Heaps
+                                                                        </div>
+                                                                    </span></div>
+                                                            </div>
+                                                            <div
+                                                                class="rounded overflow-hidden bg-white p-2 shadow-none border border-gray-300">
+                                                                <span class="text-xs text-gray-500 float-right">
+                                                                    #8
+                                                                </span>
+                                                                <h3 class="text-xs text-gray-500">10/06/2020 at 02:41
+                                                                </h3>
+                                                                <h3 class="text-xs text-gray-500">
+                                                                    Assignee: Ranil Kempen
+                                                                </h3> <a
+                                                                    class="cursor-pointer font-medium text-gray-900 hover:underline">
+                                                                    Can we always use a hash table instead of a list?
+                                                                </a>
+                                                                <div class="space-x-1 select-none"><span
+                                                                        class="inline-block border rounded-full px-2 py-1 text-xs font-semibold text-gray-700"
+                                                                        style="line-height: 1 !important;">
+                                                                        <div class="flex flex-row items-center">
+                                                                            <div class="w-2 h-2 rounded-full flex-col mr-1"
+                                                                                style="background-color: rgb(14, 159, 110);">
+                                                                            </div>
+                                                                            Linked List
+                                                                        </div>
+                                                                    </span><span
+                                                                        class="inline-block border rounded-full px-2 py-1 text-xs font-semibold text-gray-700"
+                                                                        style="line-height: 1 !important;">
+                                                                        <div class="flex flex-row items-center">
+                                                                            <div class="w-2 h-2 rounded-full flex-col mr-1"
+                                                                                style="background-color: rgb(255, 90, 31);">
+                                                                            </div>
+                                                                            Hash Table
+                                                                        </div>
+                                                                    </span></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </section>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
