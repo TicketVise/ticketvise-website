@@ -1,3 +1,22 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid meet" viewBox="230.2925170068022 96.27891156462579 270.53061224489807 271.53061224489784" width="266.53" height="267.53"><defs><path d="M497.82 230.54C497.82 304.1 438.11 363.81 364.56 363.81C291.01 363.81 231.29 304.1 231.29 230.54C231.29 156.99 291.01 97.28 364.56 97.28C438.11 97.28 497.82 156.99 497.82 230.54Z" id="i1IYEbLIXN"></path><path d="M344.56 177.87L384.56 177.87L384.56 364.81L344.56 364.81L344.56 177.87Z" id="eXrnj3m7"></path><path d="M451.03 177.87L451.03 217.87L278.08 217.87L278.08 177.87L451.03 177.87Z" id="bBDnkOUKd"></path></defs><g><g><use xlink:href="#i1IYEbLIXN" opacity="1" fill="#dd6b20" fill-opacity="1"></use></g><g><use xlink:href="#eXrnj3m7" opacity="1" fill="#ffffff" fill-opacity="1"></use></g><g><use xlink:href="#bBDnkOUKd" opacity="1" fill="#ffffff" fill-opacity="1"></use></g></g></svg>
+<?xml version="1.0"?>
+<svg width="270.53061224489807" height="271.53061224489784" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid meet">
+ <defs>
+  <path d="m497.82,230.54c0,73.56 -59.71,133.27 -133.26,133.27c-73.55,0 -133.27,-59.71 -133.27,-133.27c0,-73.55 59.72,-133.26 133.27,-133.26c73.55,0 133.26,59.71 133.26,133.26z" id="i1IYEbLIXN"/>
+  <path d="m344.56,177.87l40,0l0,186.94l-40,0l0,-186.94z" id="eXrnj3m7"/>
+  <path d="m451.03,177.87l0,40l-172.95,0l0,-40l172.95,0z" id="bBDnkOUKd"/>
+ </defs>
+ <g class="layer">
+  <title>Layer 1</title>
+  <g id="svg_1">
+   <g id="svg_2">
+    <use fill="#ea580c" id="svg_3" x="-229" xlink:href="#i1IYEbLIXN" y="-95"/>
+   </g>
+   <g id="svg_4">
+    <use fill="#ffffff" id="svg_5" transform="matrix(1 0 0 0.994651 0 0.443295)" x="-229" xlink:href="#eXrnj3m7" y="-95"/>
+   </g>
+   <g id="svg_6" transform="matrix(1 0 0 1 0 0)">
+    <use fill="#ffffff" id="svg_7" x="-229" xlink:href="#bBDnkOUKd" y="-95"/>
+   </g>
+  </g>
+ </g>
+</svg>
